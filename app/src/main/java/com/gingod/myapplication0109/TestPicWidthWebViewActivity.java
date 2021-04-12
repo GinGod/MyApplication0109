@@ -4,8 +4,9 @@ import android.os.Build;
 import android.webkit.WebSettings;
 
 import com.gingod.myapplication0109.base.BaseWebviewActivity;
+import com.gingod.myapplication0109.base.BaseWebviewActivity2;
 
-public class TestPicWidthWebViewActivity extends BaseWebviewActivity {
+public class TestPicWidthWebViewActivity extends BaseWebviewActivity2 {
     String content = "<div style=\"text-align:center;\">\n" +
             "\t<span style=\"font-size:14px;\">项目位于云南省曲靖市师宗县，是城市公共活动的核心区域，也是一个以文笔塔为核心的生态休闲公园，规划设计面积为130公顷。</span> \n" +
             "</div>\n" +
@@ -22,6 +23,8 @@ public class TestPicWidthWebViewActivity extends BaseWebviewActivity {
             "\t<img src=\"https://www.1000dpt.com/uploadnet/library/article/null/1541987604414599e99e22c897.jpg\" alt=\"\" /> \n" +
             "</div>";
 
+    private String pic = "/uploadnet/library/data/U3sb2OwQ/16178704260041617843788910.jpg|||/uploadnet/library/data/U3sb2OwQ/16178704262261617843784283.jpg|||/uploadnet/library/data/U3sb2OwQ/16178704262261617843784283.jpg";
+
     @Override
     protected int getLayoutId() {
         return R.layout.activity_testpicwidthwebview;
@@ -31,10 +34,19 @@ public class TestPicWidthWebViewActivity extends BaseWebviewActivity {
     public void initView() {
         mWebview = findViewById(R.id.wv_picwidthwebview);
         super.initView();
+        String[] split = pic.split("\\|{3}");
+        loge(split.length + "  1String[] split");
+        loge(split[0] + "  1String[] split");
+        loge(split[1] + "  1String[] split");
+        loge(split[2] + "  1String[] split");
     }
 
     @Override
     public void loadUrl() {
+        mWebview.loadUrl("https://library.1000dpt.com:444/editor/details?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2MTk5MjQ5NTc3MzksInBheWxvYWQiOiJ7XCJ1c2VyVHlwZVwiOjEsXCJ1c2VySWRcIjoxNDYxLFwiYWNjb3VudFwiOlwiWDE4RTBuNzhcIn0ifQ.JwEx1Mp-ZXBkWCUhfv4wdga0tq4kOVjDp_d39oOH-4s&type=Android&articleId=1946211641");
+        mWebview.loadUrl("https://privacy.1000dpt.com/文库交易说明.html");
         mWebview.loadDataWithBaseURL(null, content, "text/html", "utf-8", null);
+        mWebview.loadUrl("file:///android_asset/bootstrap-fileinput-master/examples/index.html");
+        mWebview.loadUrl("http://10.66.5.124:8022/");
     }
 }

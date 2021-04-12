@@ -125,7 +125,8 @@ public class MainActivity extends BaseSimpleActivity {
                 switch (position) {
                     case 0:
                         openActivity(TestPicWidthWebViewActivity.class);
-                        break;case 1:
+                        break;
+                    case 1:
                         openActivity(TestPicWidthWebViewActivity1.class);
                         break;
                 }

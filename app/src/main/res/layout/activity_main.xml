@@ -18,12 +18,25 @@
         android:layout_height="wrap_content"
         android:text="Hello World!" />
 
-    <ImageView
-        android:id="@+id/iv_main"
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="152dp"
-        android:scaleType="fitCenter"
-        android:src="@mipmap/ic_launcher_round" />
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/iv_main"
+            android:layout_width="wrap_content"
+            android:layout_height="152dp"
+            android:scaleType="fitCenter"
+            android:src="@mipmap/ic_launcher_round" />
+
+        <include
+            layout="@layout/layout_workclip_mytask"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true" />
+
+    </RelativeLayout>
+
 
     <ImageView
         android:id="@+id/iv_main2"
