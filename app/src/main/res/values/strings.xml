@@ -1,0 +1,795 @@
+<resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="MissingTranslation">
+    <string name="app_name" tools:ignore="MissingTranslation">千年设计</string>
+
+    <string name="login" tools:ignore="MissingTranslation">登录</string>
+    <string name="pers_user" tools:ignore="MissingTranslation">个人用户</string>
+    <string name="company_user" tools:ignore="MissingTranslation">企业用户</string>
+    <string name="forget_pwd" tools:ignore="MissingTranslation">忘记密码</string>
+    <string name="register" tools:ignore="MissingTranslation">注册</string>
+
+    <string name="bind_cell_phone" tools:ignore="MissingTranslation">请输入绑定的手机号</string>
+    <string name="input_cell_phone" tools:ignore="MissingTranslation">请输入手机号码</string>
+    <string name="please_input_phone" tools:ignore="MissingTranslation">请输入手机号</string>
+    <string name="sms_verification_code" tools:ignore="MissingTranslation">短信验证码</string>
+    <string name="input_verification_code" tools:ignore="MissingTranslation">请输入验证码</string>
+    <string name="get_verification_code" tools:ignore="MissingTranslation">获取验证码</string>
+    <string name="next" tools:ignore="MissingTranslation">下一步</string>
+
+    <string name="new_reg" tools:ignore="MissingTranslation">新用户注册</string>
+    <string name="input_phone" tools:ignore="MissingTranslation">输入手机号</string>
+    <string name="set_new_pwd" tools:ignore="MissingTranslation">设置新密码</string>
+    <string name="new_pwd" tools:ignore="MissingTranslation">新密码</string>
+    <string name="ensure_new_pwd" tools:ignore="MissingTranslation">确认新密码</string>
+    <string name="again_pwd" tools:ignore="MissingTranslation">请再次输入密码</string>
+    <string name="set_pwd" tools:ignore="MissingTranslation">设置密码</string>
+
+    <string name="webrtc_chat_mute" tools:ignore="MissingTranslation">静音</string>
+    <string name="webrtc_chat_hands_free" tools:ignore="MissingTranslation">免提</string>
+    <string name="webrtc_chat_refuse" tools:ignore="MissingTranslation">拒接</string>
+    <string name="webrtc_chat_answer" tools:ignore="MissingTranslation">接听</string>
+    <string name="webrtc_chat_hang_up" tools:ignore="MissingTranslation">挂断</string>
+    <string name="webrtc_switch_voice" tools:ignore="MissingTranslation">切到语音</string>
+    <string name="webrtc_switch_camera" tools:ignore="MissingTranslation">切换</string>
+
+    <string name="input_tell" tools:ignore="MissingTranslation">请输入手机号码</string>
+    <string name="input_account" translatable="false">请输入企业账号</string>
+    <string name="ensure_account" tools:ignore="MissingTranslation">请输入正确的账号</string>
+    <string name="ensure_right_tell" translatable="false">请输入正确的手机号码</string>
+    <string name="ensure_right_veri" translatable="false">请输入正确的验证码</string>
+    <string name="stop_account" translatable="false">该账号已被停用</string>
+    <string name="input_pwd" translatable="false">密码（6-16位大小写字母、数字）</string>
+    <string name="input_pwd2" translatable="false">请输入密码</string>
+    <string name="check_pwd" translatable="false">账号或密码错误，请重新输入</string>
+    <string name="input_veri" translatable="false">请输入验证码</string>
+    <string name="get_veri" translatable="false">获取验证码</string>
+    <string name="again_get_veri" translatable="false">重新获取验证码</string>
+    <string name="before_get_veri" translatable="false">请先输入手机号码</string>
+
+    <string name="pwd" translatable="false">请输入6-16位字母、数字</string>
+    <string name="same_pwd" translatable="false">两次输入密码必须相同</string>
+    <string name="reset_pwd_success" translatable="false">重置密码成功</string>
+    <string name="reset_pwd_fail" translatable="false">重置密码失败</string>
+
+    <string name="logo" translatable="false">千年迹 人筑之</string>
+    <string name="welcome" translatable="false">欢迎新用户注册</string>
+
+    <string name="approve" translatable="false">*注册代表您同意</string>
+    <string name="user_agree" translatable="false">《用户协议》</string>
+
+    <string name="filterPwd" translatable="false">0123456789zxcvbnmasdfghjklqwertyuiopZXCVBNMASDFGHJKLQWERTYUIOP.@~-,:*?!_#/=+&amp;^;%$（)\&lt;&gt;|[]{}</string>
+    <string name="filterAccount" translatable="false">0123456789zxcvbnmasdfghjklqwertyuiopZXCVBNMASDFGHJKLQWERTYUIOP</string>
+
+    <string name="navigation_drawer_open" translatable="false">Open navigation drawer</string>
+    <string name="navigation_drawer_close" translatable="false">Close navigation drawer</string>
+
+    <string name="pet_name" translatable="false">昵称</string>
+    <string name="good_at" translatable="false">擅长：</string>
+    <string name="established_time" translatable="false">成立时间：</string>
+    <string name="municipal" translatable="false">市政</string>
+    <string name="professional" translatable="false">职称：</string>
+    <string name="com_scale" translatable="false">规模：</string>
+    <string name="com_nature" translatable="false">公司性质</string>
+    <string name="senior" translatable="false">高级</string>
+    <string name="work_experience" translatable="false">5-10年工作经验</string>
+    <string name="feedback_rate" translatable="false">好评率：</string>
+    <string name="percentage" translatable="false">96%</string>
+    <string name="integral" translatable="false">积分：</string>
+    <string name="my_wallet" translatable="false">我的钱包</string>
+    <string name="trans_details" translatable="false">交易明细</string>
+    <string name="bind_success" translatable="false">绑定成功</string>
+    <string name="bind_fail" translatable="false">绑定失败</string>
+    <string name="alipay_account">账号：</string>
+    <string name="binding_alipay">绑定支付宝</string>
+    <string name="alipay_acc">支付宝账号</string>
+    <string name="alipay_prompt">*请确认支付宝账号信息无误，避免平台转账到错误账号造成不必要的损失</string>
+    <string name="alipay_prompt2">请确保绑定的支付宝处于正常使用状态，如若出现款项无法转入转出，所造成的经济后果由用户自行承担。</string>
+    <string name="input_alipay_acc">输入支付宝账号</string>
+    <string name="gold_coins">当前金币(个)</string>
+    <string name="current_balance">当前余额(元)</string>
+    <string name="mail_list">通讯录</string>
+    <string name="meeting">会议</string>
+    <string name="task" translatable="false">我的任务</string>
+    <string name="my_workfolder">我的工作夹</string>
+    <string name="set">设置</string>
+    <string name="signature">签章管理</string>
+    <string name="exit_login">退出登录</string>
+    <string name="vedio_meet">视频会议</string>
+    <string name="vedio_call">视频通话</string>
+    <string name="my_appli">我的应用</string>
+    <string name="sponsor_confer">发起会议</string>
+    <string name="sponsor">发起</string>
+    <string name="make_appoint">预约会议</string>
+    <string name="my_plan">我的会议</string>
+    <string name="asterisk">* </string>
+    <string name="participants">参会人员</string>
+    <string name="start_time">开始时间</string>
+    <string name="end_time">结束时间</string>
+    <string name="estimated_time_duration">预估时长</string>
+    <string name="participants_number">（8/9)</string>
+    <string name="conference_theme">会议主题</string>
+    <string name="leg_limit">长度不得超过22个字</string>
+    <string name="file_sharing">文件共享</string>
+    <string name="numColumns">5</string><!--gridView 的列数-->
+    <string name="special_friend">特别好友</string>
+    <string name="cancel">取消</string>
+    <string name="selectded">已选择：</string>
+    <string name="sure">确定（3/8）</string>
+    <string name="btn_sure">确定</string>
+    <string name="upload_file">上传文件</string>
+    <string name="upload">上传</string>
+    <string name="keywords">关键字搜索</string>
+    <string name="search">搜索</string>
+    <string name="start">开始</string>
+    <string name="start_meeting">开始中的会议</string>
+    <string name="join_meeting">加入会议</string>
+    <string name="not_start_meeting">未开始的会议</string>
+    <string name="complete_meeting">已结束的会议</string>
+    <string name="accept">接受</string>
+    <string name="cancel_meet">取消会议</string>
+    <string name="minute_start">10分钟后开始</string>
+    <string name="refuse">拒绝</string>
+    <string name="more_loading">更多加载</string>
+    <string name="meeting_details">会议详情</string>
+    <string name="meeting_title">会议主题：</string>
+    <string name="host">主持人：</string>
+    <string name="meeting_time">会议时间：</string>
+    <string name="join_meeting_num">参会人数：</string>
+    <string name="join_meeting_member">参会人员：</string>
+    <string name="join_status">参会人员状态</string>
+    <string name="al_accept">已接受</string>
+    <string name="al_refuse">已拒绝</string>
+    <string name="no_response">未响应</string>
+    <string name="enjoy">共享文件</string>
+    <string name="mill_file">千年文件</string>
+    <string name="video_invitation">视频邀请</string>
+
+    <string name="album">相册</string>
+    <string name="take">拍摄</string>
+    <string name="document">文件</string>
+    <string name="calling_card">名片</string>
+    <string name="edit">编辑</string>
+    <string name="image_doodle">涂鸦</string>
+    <string name="image_text">文字</string>
+    <string name="image_mosaic">马赛克</string>
+    <string name="image_clip">裁剪</string>
+    <string name="image_reset">还原</string>
+    <string name="image_done">完成</string>
+    <string name="image_cancel">取消</string>
+    <string name="image_rotate">旋转</string>
+
+    <string name="image_mosaic_tip">请直接在图片上涂抹虚化</string>
+    <string name="image_undo">撤销</string>
+    <string name="image_all_photo">所有照片</string>
+    <string name="image_original">原图</string>
+    <string name="image_preview">预览</string>
+    <string name="choose_images">选择图片</string>
+
+    <string name="is_delete">是否删除该条信息？</string>
+    <string name="recall_no">发送时间超过2分钟的消息，不能被撤回。</string>
+    <string name="save_imgs">保存到相册</string>
+    <string name="voice_call">语音通话</string>
+    <string name="wait_accept_invitation">正在等待对方接受邀请...</string>
+    <string name="switch_voice">切换到语音通话</string>
+    <string name="invite_vedio">邀请你视频通话</string>
+    <string name="answer_phone">接听</string>
+    <string name="switch_voice2">切换至语音</string>
+    <string name="switching_camera">切换摄像头</string>
+    <string name="invite_voice">邀请你语音通话</string>
+    <string name="send_to">发送给：</string>
+    <string name="leave">留言</string>
+    <string name="add_mail">添加到通讯录</string>
+    <string name="top_chat">置顶聊天</string>
+    <string name="no_interruption_of_news">消息免打扰</string>
+    <string name="look_more">查看更多团队成员</string>
+    <string name="team_name">团队名称</string>
+    <string name="team_notice">团队公告</string>
+    <string name="group_owner_edit">仅群主可编辑</string>
+    <string name="info_take">消息记录</string>
+    <string name="clear_info">清空聊天记录</string>
+    <string name="del_exit">删除并退出</string>
+    <string name="modify_team_name">修改群名称</string>
+    <string name="only_group_owners_can_edit">仅群主可编辑</string>
+    <string name="edit_group">编辑分组</string>
+    <string name="input_new_group_name">请输入新的分组名称</string>
+    <string name="input_group_name">请输入分组名称</string>
+    <string name="modify_bindings">修改绑定</string>
+    <string name="bindings">绑定</string>
+    <string name="my_team_nick">我在本群昵称</string>
+    <string name="affirm">确认</string>
+
+    <string name="contact">联系人</string>
+    <string name="friend">好友</string>
+    <string name="new_friends">新的朋友</string>
+    <string name="group_management">分组管理</string>
+    <string name="add">添加</string>
+    <string name="look">查看</string>
+    <string name="al_add">已添加</string>
+    <string name="al_overdue">已过期</string>
+    <string name="revise_remarks">修改备注</string>
+    <string name="revise_team_name">修改群名称</string>
+    <string name="modify_team_nick">修改所在团队的昵称</string>
+    <string name="team_announcement">团队公告</string>
+    <string name="grouping">所在分组</string>
+    <string name="my_friend">我的好友</string>
+    <string name="project_experience">项目经验</string>
+    <string name="personal_works">个人作品</string>
+    <string name="send_msg">发消息</string>
+    <string name="delete_friend">删除好友</string>
+    <string name="validated">通过验证</string>
+    <string name="add_as_friend">加为好友</string>
+    <string name="send">发送</string>
+    <string name="al_send">已发送</string>
+    <string name="add_friends">添加好友</string>
+    <string name="user_not_exist">用户不存在</string>
+    <string name="point_out">将联系人删除，聊天记录仍将在消息中保存</string>
+    <string name="complete">完成</string>
+    <string name="add_group">添加分组</string>
+    <string name="delete">删除</string>
+    <string name="prompting">该分组下还有好友存在，删除后好友会放到“我的好友”中</string>
+    <string name="add_fail">添加失败</string>
+    <string name="group_full">分组满了</string>
+    <string name="com_name">公司名称：</string>
+    <string name="our_team">团队介绍</string>
+    <string name="our_team2">团队介绍：</string>
+    <string name="company_case">公司案例</string>
+    <string name="tips">温馨提示</string>
+    <string name="clear_notes">您确定要清除聊天记录么？</string>
+    <string name="mobile_packet">移动至</string>
+    <string name="project_descri">项目描述： </string>
+    <string name="personal_responsibility">个人职责： </string>
+    <string name="works_time">作品时间： </string>
+    <string name="works_time2">作品时间 </string>
+    <string name="works_descri">作品描述： </string>
+    <string name="patent_description">专利描述： </string>
+    <string name="department_branch">部门名称： </string>
+    <string name="select_contacts">选择联系人</string>
+    <string name="test1">负责公司项目景观设计工作负责公司项目景观设计工作负责公司项目景观设计工作负责公司项目景观设计工作负责公司项目景观设计工作负责公司项目景观设计工作负责公司项目景观设计工作负责公司项目景观设计工作 </string>
+    <string name="test2"> 负责公司项目景观设计工作负责公司项目景观设计工作负责公司项目景观设计工作负责公司项目景观设计工作负责公司项目景观设计工作负责公司项目景观设计工作负责公司项目景观设计工作负责公司项目景观设计工作负责公司项目景观设计工作 </string>
+
+    <string name="per_user_phone">个人用户注册手机号</string>
+    <string name="reg_pwd">密码</string>
+    <string name="reg_repwd">确认密码</string>
+    <string name="reg_now">立即注册</string>
+    <string name="per_user_set_pwd">个人用户设置密码</string>
+    <string name="com_user_set_pwd">企业用户设置密码</string>
+    <string name="reg_success">注册成功</string>
+    <string name="reg_fail">注册失败</string>
+    <string name="company_name">公司名称</string>
+    <string name="input_company_name">请输入公司名称</string>
+    <string name="set_account">设置账号</string>
+    <string name="inpt_account">请输入4-20位字母、数字账号</string>
+    <string name="com_set_account">企业用户设置账号</string>
+    <string name="enter_com_name">请输入4-40位公司名称字符</string>
+    <string name="enter_com_account">请输入4-20位字母、数字账号</string>
+    <string name="company_user_phone">企业用户注册手机号</string>
+    <string name="contacts">联系人：</string>
+    <string name="input_contacts">请输入1-50位字符联系人姓名</string>
+    <string name="agree">用户协议</string>
+    <string name="other_equipment">您的账号已在其它设备上登录，如非本人操作，请重新登录，并尽快修改密码</string>
+
+    <string name="agree1">【千年设计】（以下简称“本网站”）依据《【千年设计】服务协议》（以下简称“本协议”）的规定提供服务，本协议具有合同效力。
+                    用户注册时，请您认真阅读本协议，审阅并接受或不接受本协议。</string>
+    <string name="agree2">本协议适用于本网站的用户（以下简称“用户”、“您”），若您使用本网站（包括但不限于以任何形式接通、进入、浏览本网站，
+                    或者使用本网站的各项服务、功能等），即表示您已充分阅读、理解并同意自己与本网站订立本协议，且您自愿受本协议的条款约束。
+                    本网站有权随时变更本协议并在本网站上予以公告。经修订的条款一经在本网站的公布后，立即自动生效。如您不同意相关变更，必须停止使用本网站。
+                    本协议内容包括协议正文及所有【千年设计】已经发布的各类规则。所有规则为本协议不可分割的一部分，与本协议正文具有同等法律效力。
+                    一旦您继续使用本网站，则表示您已接受并自愿遵守经修订后的条款。\n</string>
+    <string name="agree3">特别提示：</string>
+    <string name="agree4">1、本协议加深字体内容需用户谨慎查阅，若您已经注册为本网站用户，即表示您已充分阅读、理解并同意自己与本网站订立本用户服务协议，
+                    且您自愿受本用户服务协议的条款约束。如果您拒绝接受本用户服务协议，您必须立即放弃使用本网站。 本公司有权在必要时更新本协议。
+                    本公司保留对网站结构、服务、功能等进行调整的权利。除非特别声明以外，新功能、新服务均适用于本协议。无论本协议的每次更新还是服务内容调整，
+                    都会在本公司平台即刻发布，无需另行通知您并立即生效。\n2、本公司有权就本网站提供某一项功能或服务制订使用规则、服务规则、说明、使用协议或服务协议，
+                    该等规则内容一经正式在本网站公布，即为本协议不可分割的组成部分，您同样应当遵守。如您继续使用该项功能或服务的，即视为您对前述规则、说明或协议的接受。\n</string>
+    <string name="agree5">定义：</string>
+    <string name="agree6">在本协议中所使用的下列词语，除非另有定义，应具有以下含义： “本网站”在无特别说明的情况下，均指"【千年设计】"（www. 网址域名）。\n
+                    “本公司”是指“千年城市规划工程设计股份有限公司”\n “用户”：指具有完全民事行为能力的【千年设计】各项服务的使用者。\n “雇主”：
+                    是指在本网站上进行发布需求或购买增值服务等“买”操作的用户。\n “知识工作者”：是指在本网站上参加竞标、销售服务、出售技能等“卖”操作的用户。\n</string>
+    <string name="agree7">第一条 用户资格</string>
+    <string name="agree8">1、只有符合下列条件之一的自然人或法人才能申请成为本网站用户，可以使用本网站的服务：\n （1）年满十八岁，并具有民事权利能力和民事行为能力的自然人；\n
+                  （2）无民事行为能力人或限制民事行为能力人应经过其监护人的同意；\n （3）根据中国法律、法规、行政规章成立并合法存在的机关、企事业单位、社团组织和
+                  其他组织。无法人资格的单位或组织不能注册为本网站用户的，其与本网站之间的协议自始无效，本网站一经发现，有权立即终止对该用户的服务，并追究其使用
+                  本网站服务的一切法律责任。\n （4）为保证用户在平台操作的有序合规，用户实名认证时须上传个人身份证证照，由本网站审核；如用户为18周岁以下的，用户须
+                  上传父母或监护人的身份证及关系证明，由本公司审核。\n2、用户需要提供明确的联系地址和联系电话，并提供真实姓名或名称。\n3、本网站用户须承诺遵守法律
+                  法规、社会主义制度、国家利益、公民合法权益、公共秩序、社会道德风尚。\n 本站用户须遵守诚实信用原则，一旦注册成功本网站视为用户满足本协议第一条“用户资格”
+                  的所有要求。\n</string>
+    <string name="agree9">第二条 用户的权利和义务</string>
+    <string name="agree10"> 一、用户的权利\n 1、用户有权根据本协议及本网站发布的相关规则，利用本网站发布需求信息、查询用户信息、参与需求投标，在本网站社区及相关
+                    产品发布信息，参加本网站的有关活动及有权享受本网站提供的其他有关资讯及信息服务。\n2、用户有权在同意本网站相关规则的前提下享受消费者保障服务。
+                    \n3、用户有权根据需要更改登录和钱包密码。用户自行负责对会员账号、密码和权限的管理，并对其账号发生的所有行为负责。如果因用户未妥善管理账号、
+                    密码或者管理不善造成的信息泄露、利益受损或其他不合规行为，均由用户自己承担，本公司不承担任何责任。\n二、用户的义务\n1、用户须自行负责自己的用户
+                    账号和密码，且须对在用户账号密码下发生的所有活动（包括但不限于发布需求信息、网上点击同意各类协议、规则、参与需求投标等）承担责任。用户有权根据
+                    需要更改登录和账户提现密码。因用户的过错导致的任何损失由用户自行承担，该过错包括但不限于：不按照交易提示操作，未及时进行交易操作，遗忘或泄漏密码，
+                    密码被他人破解，用户使用的计算机被他人侵入。\n2、用户应当向本网站提供真实准确的注册信息，包括但不限于真实姓名、身份证号、联系电话、地址、邮政编码等。
+                    保证本网站可以通过上述联系方式与自己进行联系。同时，用户也应当在相关资料实际变更时及时更新有关注册资料。\n3、用户在本网站注册的账号名称，不得有下列
+                    情形： \n（1）违反宪法或法律法规规定的； \n（2）危害国家安全，泄露国家秘密，颠覆国家政权，破坏国家统一的；\n（3）损害国家荣誉和利益的，损害公共利益的；
+                    \n（4）煽动民族仇恨、民族歧视，破坏民族团结的；\n（5）破坏国家宗教政策，宣扬邪教和封建迷信的；\n（6）散布谣言，扰乱社会秩序，破坏社会稳定的；
+                    \n（7）散布淫秽、色情、赌博、暴力、凶杀、恐怖或者教唆犯罪的；\n（8）侮辱或者诽谤他人，侵害他人合法权益的；\n（9）含有法律、行政法规禁止的其他内容的。
+                    \n4、用户不得以虚假信息骗取账号名称注册，或其账号头像、简介等注册信息存在违法和不良信息。 \n5、用户不得冒用、关联机构或社会名人注册账号名称。 \n6、用户
+                    不得以任何形式擅自转让或授权他人使用自己在本网站的用户帐号（实名认证通过后，不能进行变更）。 \n7、用户有义务确保在本网站上发布的需求信息真实、准确，
+                    无误导性。 \n8、用户在本网站上发布需求和在社区内及相关产品发布信息，不得违反国家法律、法规、行政规章的规定，不得侵犯他人知识产权或其他合法权益的信息，
+                    不得违背社会公共利益或公共道德，不得违反【千年设计】的相关规定。不得利用本公司及本网站平台从事任何有违法律和社会公德的活动；不得传输任何非法的、骚扰
+                    性的、中伤他人的、辱骂性的、恐吓性的、伤害性的、庸俗的，淫秽的等信息；不得传输任何涉及国家安全的资料；不得侵犯任何第三方著作权、专利、商标、商业秘密、
+                    隐私权、名誉权或其它权利的信息；不得干扰本网站的正常服务秩序。否则，本公司有权取消其账号，有权单方面终止对用户提供的服务。相关系统记录有可能作为证据
+                    提交司法机关。 \n9、用户在本网站交易中应当遵守诚实信用原则，不得以干预或操纵发布需求等不正当竞争方式扰乱网上交易秩序，不得从事与网上交易无关的不当行为。
+                    \n10、用户不应采取不正当手段（包括但不限于虚假需求、互换好评等方式）提高自身或他人信用度，或采用不正当手段恶意评价其他用户，降低其他用户信用度。 \n11、用户
+                    不得违反《银行卡业务管理办法》使用银行卡，或利用信用卡套取现金（以下简称套现）；用户不得盗刷他人银行卡；用户不得明知或应知他人可能盗刷银行卡而与对方进行
+                    交易。 \n12、用户承诺自己在使用本网站实施的所有行为遵守法律、法规、行政规章和本网站的相关规定以及各种社会公共利益或公共道德。如有违反导致任何法律后果的发生，
+                    用户将以自己的名义独立承担相应的法律责任。 \n13、用户在本网站网上交易过程中如与其他用户因交易产生纠纷，可以请求本网站从中予以协调处理。用户如发现其他用户有
+                    违法或违反本协议的行为，可以向本网站举报。 \n14、除【千年设计】另有规定外，用户应当自行承担因交易产生的相关费用，并依法纳税。 \n15、未经本网站书面允许，用户
+                    不得将本网站的任何资料以及在交易平台上所展示的任何信息作商业性利用（包括但不限于以复制、修改、翻译等形式制作衍生作品、分发或公开展示）。 16、用户不得使用以
+                    下方式登录网站或破坏网站所提供的服务： \n（1）以任何机器人软件、蜘蛛软件、爬虫软件、刷屏软件或其它自动方式访问或登录本网站； \n（2）通过任何方式对本公司内部结
+                    构造成或可能造成不合理或不合比例的重大负荷的行为； \n（3）通过任何方式干扰或试图干扰网站的正常工作或网站上进行的任何活动。 \n17、用户有权在同意本网站相关规则的
+                    前提下享受消费者保障服务（包括但不限于诚信保证、保证完成、保证原创、保证提供源码、保证推广效果、三个月维护、免费修改等）。 \n18、用户同意接收来自本网站的信息，
+                    包括但不限于活动信息、交易信息、促销信息等。 用户通过本网站与其他的用户发生所发生的任何业务和法律纠纷，均由用户方自行解决，与本公司无关。倘若您与一名或一名以
+                    上用户发生争议，您同意免除本公司（包括本公司代理人和雇员）在因该等争议而引起的，或在任何方面与该等争议有关的不同种类和性质的任何(实际和后果性的)权利主张、要求
+                    和损害赔偿等方面的责任。\n</string>
+    <string name="agree11">第三条 本公司的权利和义务</string>
+    <string name="agree12">一、本公司的权利\n1、本网站有权对用户的注册资料进行审查，对存在任何问题或怀疑的注册资料，本网站有权发出通知询问用户并要求用户做出解释、改正。
+                    \n2、用户因在本网站网上交易与其他用户产生纠纷的，用户将纠纷告知本网站，或本网站知悉纠纷情况的，经审核后，本网站有权通过电子邮件及电话联系向纠纷双方了
+                    解纠纷情况，并将所了解的情况通过电子邮件互相通知对方；用户通过司法机关依照法定程序要求本网站提供相关资料，本网站将积极配合并提供有关资料。 \n3、因网上
+                    信息平台的特殊性，本网站不承担对所有用户的交易行为以及与交易有关的其他事项进行事先审查的义务，但如发生以下情形，本网站有权无需征得用户的同意限制用户
+                    的活动、向用户核实有关资料、发出警告通知、暂时中止、无限期中止及拒绝向该用户提供服务： \n（1）用户以非自然人名义进行认证之后认证主体自行注销或者经有权
+                    机关吊销或撤销的； \n（2）用户违反本协议或因被提及而纳入本协议的相关规则； \n（3）存在用户或其他第三方通知本网站，认为某个用户或具体交易事项存在违法或不
+                    当行为，并提供相关证据，而本网站无法联系到该用户核证或验证该用户向本网站提供的任何资料； \n（4）存在用户或其他第三方通知本网站，认为某个用户或具体交易
+                    事项存在违法或不当行为，并提供相关证据。本网站以普通非专业人员的知识水平标准对相关内容进行判别，可以明显认为这些内容或行为可能对他方或本网站造成财务
+                    损失或承担法律责任。 \n4、根据国家法律、法规、行政规章规定、本协议的内容和本网站所掌握的事实依据，可以认定该用户存在违法或违反本协议行为以及在本网站交
+                    易平台上的其他不当行为，本网站有权无需征得用户的同意在本网站交易平台及所在网站上以网络发布形式公布该用户的违法行为，并有权随时作出删除相关信息、终止服
+                    务提供等处理。 \n5、本网站依据本协议及相关规则，可以冻结、使用、先行赔付、退款、处置用户缴存并冻结在本网站账户内的资金。因违规而被封号的用户账户中的资金
+                    在按照规定进行处置后尚有余额的，该用户可申请提现。 \n6、本网站有权在不通知用户的前提下，删除或采取其他限制性措施处理下列信息：包括但不限于以规避费用为目的；
+                    以炒作信用为目的；存在欺诈等恶意或虚假内容；与网上交易无关或不是以交易为目的；存在恶意竞价或其他试图扰乱正常交易秩序因素；违反公共利益或可能严重损害本网站
+                    和其他用户合法利益。\n二、本公司的义务\n 1、本网站有义务在现有技术水平的基础上努力确保整个网上交流平台的正常运行，尽力避免服务中断或将中断时间限制在最短时间内，
+                    保证用户网上交流活动的顺利进行。 \n2、本网站有义务对用户在注册使用本网站信息平台中所遇到的与交易或注册有关的问题及反映的情况及时作出回复。\n</string>
+    <string name="agree13">第四条 服务的中断和终止</string>
+    <string name="agree14">1、本网站可自行全权决定以任何理由(包括但不限于本网站认为用户已违反本协议及相关规则的字面意义和精神，或用户在超过180日内未登录本网站等)终止对用户
+                    的服务，并有权在两年内保存用户在本网站的全部资料（包括但不限于用户信息、产品信息、交易信息等）。同时本网站可自行全权决定，在发出通知或不发出通知的情况下，
+                    随时停止提供全部或部分服务。服务终止后，本网站没有义务为用户保留原账户中或与之相关的任何信息，或转发任何未曾阅读或发送的信息给用户或第三方。 \n2、若用户申
+                    请终止本网站服务，需经本网站审核同意，方可解除与本网站的协议关系，但本网站仍保留下列权利： \n（1）本网站有权在法律、法规、行政规章规定的时间内保留该用户的资料，
+                    包括但不限于以前的用户资料、交易记录等； \n（2）若终止服务之前，该用户在本网站交易平台上存在违法行为或违反本协议的行为，本网站仍可行使本协议所规定的权利。 \n3、用
+                    户存在下列情况，本网站可以终止向该用户提供服务： \n（1）在用户违反本协议及相关规则规定时，本网站有权终止向该用户提供服务。本网站将在中断服务时通知用户。但该用户
+                    在被本网站终止提供服务后，再一次直接或间接或以他人名义注册为本网站用户的，本网站有权再次单方面终止为该用户提供服务； \n（2）本网站发现用户注册资料中主要内容是虚
+                    假的，本网站有权随时终止为该用户提供服务； \n（3）本协议终止或更新时，用户未确认新的协议的； \n（4）其它本网站认为需终止服务的情况。\n</string>
+    <string name="agree15">第五条 责任声明</string>
+    <string name="agree16">当用户接受该协议时，用户应当明确了解并同意： \n1、本网站不能随时预见到任何技术上的问题或其他困难。该等困难可能会导致数据损失或其他服务中断。本网站
+                    是在现有技术基础上提供的服务。本网站不保证以下事项： \n（1）本网站将符合所有用户的要求； \n（2）本网站不受干扰、能够及时提供、安全可靠或免于出错；
+                    \n（3）本服务使用权的取得结果是正确或可靠的。 \n2、是否经由本网站下载或取得任何资料，由用户自行考虑、衡量并且自负风险，因下载任何资料而导致用户电脑系统
+                    的任何损坏或资料流失，用户应负完全责任。希望用户在使用本网站时，小心谨慎并运用常识。 \n3、用户经由本网站取得的建议和资讯，无论其形式或表现，绝不构成本协议
+                    未明示规定的任何保证。 \n4、基于以下原因而造成的利润、商誉、使用、资料损失或其它无形损失，本网站不承担任何直接、间接、附带、特别、衍生性或惩罚性赔偿（即使
+                    本网站已被告知前款赔偿的可能性）： \n（1）网站的使用或无法使用； \n（2）用户的传输或资料遭到未获授权的存取或变更； \n（3）本网站中任何第三方之声明或行为；
+                    \n（4）本网站在服务交易中为用户提供交易机会，推荐交易方； \n（5）本网站其它相关事宜。 \n5、本网站只是为用户提供一个服务交易的平台，对于用户所发布的需求的合法性、
+                    真实性及其品质，以及用户履行交易的能力等，本网站一律不负任何担保责任。 \n6、本网站提供与其它互联网上的网站或资源的链接，用户可能会因此连结至其它运营商经营的网站，
+                    但不表示本网站与这些运营商有任何关系。其它运营商经营的网站均由各经营者自行负责，不属于本网站控制及负责范围之内。对于存在或来源于此类网站或资源的任何内容、广告、
+                    物品或其它资料，本网站亦不予保证或负责。因使用或依赖任何此类网站或资源发布的或经由此类网站或资源获得的任何内容、物品或服务所产生的任何损害或损失，本网站不负任
+                    何直接或间接的责任。 \n7、本公司转让本协议无需征得您的同意，本公司享有单方转让或转委托第三方履行的权利。在该等转让或委托中，您的用户信息也可能将被转让给该第三方，
+                    以使该第三方可以继续有效地为您提供服务。 \n8、本公司不保证本网站是不受干扰的、没有故障的。本公司不对因人为或非人为因素造成的用户与本网站服务器之间的连接受阻而无法
+                    访问负责。您同意独立承担因操作者原因、第三方软件故障、硬件故障、网络故障、病毒、黑客、政策调整、本网站更新、服务器配置等各种原因导致的服务中断、操作或传输的迟延、
+                    未经授权的进入等引起的损失。 \n9、由于地震、台风、水灾、火灾、战争、法律法规、意外事故以及其他不可抗力事件或非因本公司原因造成的停电、服务器不能使用等，致使本网站
+                    相关服务履行迟延或不能履行的，本公司不承担任何责任。 \n10、本公司认为申请注册的用户与本公司形成竞争或对本网站正常运营造成损害时，可拒绝其申请和注册。 \n11、任何因用
+                    户违反本协议而造成本公司的经济或名誉损失，本公司有权追究其经济责任与法律责任。即使本公司未就您的某项违约行为立刻采取行动，并不表明本公司放弃就任何继后或类似的违约
+                    事件采取行动的权利。\n</string>
+    <string name="agree17">第六条 知识产权</string>
+    <string name="agree18">\n1、本公司对其开发本网站享有的知识产权，受法律保护，用户不得经由非本网站所提供的界面使用本网站。 \n2、所有其它在本网站上出现的商标或者其他知识产权为它
+                    们各自的权利人所有。 \n3、本网站及本网站所使用的任何相关软件、程序、内容，包括但不限于作品、图片、档案、资料、网站构架、网站版面的安排、网页设计、经由本网站或
+                    广告商向用户呈现的广告或资讯，均由本网站或其它权利人依法享有相应的知识产权，包括但不限于著作权、商标权、专利权或其它专属权利等，受到相关法律的保护。未经本网
+                    站或权利人明示授权，用户保证不修改、出租、出借、出售、散布本网站及本网站所使用的上述任何资料和资源，或根据上述资料和资源制作成任何种类产品。 \n4、未经本公司书
+                    面授权，用户出现以下任何一种行为，均视为对于本公司的侵权： \n（1）将本网站及其信息向任何第三方提供、销售、出租、出借、转让或披露、让其接触、修改或分许可、转许可、
+                    通过信息网络传播或以其他形式供他人利用 \n（2）对本网站及其信息进行全部或部分地翻译、分解、反向编译、反汇编、反向工程或其他试图从软件导出程序源代码的行为，或在软
+                    件的基础上书写或开发衍生软件、衍生产品或其他软件。 \n（3）限制、破坏或绕过本网站的加密措施。 \n（4）去除、掩盖或更改本网站上有关软件著作权或商标的标志。 \n（5）将本
+                    网站及其信息用于除甲方内部使用以外的任何第三方，包括但不限于向第三方提供数据处理服务、应用服务、商业共享或其他软件共享安排。 \n5、本网站授予用户不可转移及非专属的
+                    使用权，使用户可以通过单机计算机使用本网站的目标代码（以下简称“软件”），但用户不得且不得允许任何第三方复制、修改、创作衍生作品、进行还原工程、反向组译，或以其
+                    它方式破译或试图破译源代码，或出售、转让“软件”或对“软件”进行再授权，或以其它方式移转“软件”之任何权利。用户同意不以任何方式修改“软件”，或使用修改后的“软件”。\n</string>
+    <string name="agree19">第七条 隐私权</string>
+    <string name="agree20">1、信息使用 \n（1）本网站不会向任何人出售或出借用户的个人或法人信息，除非事先得到用户得许可； \n（2）本网站亦不允许任何第三方以任何手段收集、编辑、出售
+                    或者无偿传播用户的个人或法人信息。任何用户如从事上述活动，一经发现，本网站有权立即终止与该用户的服务协议，查封其账号。 \n2、信息披露 用户的个人或法人信息将在下
+                    述情况下部分或全部被披露： \n（1）经用户同意，向第三方披露； \n（2）用户在使用本网站过程中涉及到知识产权类纠纷，有他方主张权利的，本网站在审核主张方提交的资料后
+                    认为披露用户信息有助于纠纷解决的； \n（3）根据法律的有关规定，或者行政、司法机关的要求，向第三方或者行政、司法机关披露； \n（4）若用户出现违反中国有关法律或者网
+                    站规定的情况，需要向第三方披露； \n（5）为提供你所要求的产品和服务，而必须和第三方分享用户的个人或法人信息； \n（6）为保护您、我们的其他用户或我们的关联方的合法
+                    权益，我们可能将您的个人信息用于预防、发现、调查以下事项：欺诈、危害安全、违法或违反与我们或其关联方协议、政策或规则的行为； \n（7）在遵循隐私权保护以及其他相
+                    应的保密安全措施的前提下，允许我们将您的个人信息提供给相关合作方，让其根据我方指令处理相关信息； \n（8）其它本网站根据法律或者网站规定认为合适的披露。 若您不同
+                    意以上内容，请立即停止使用【千年设计】平台服务。 用户或者第三方申请本网站披露其他用户信息的，本网站有权视实际情况要求申请人出具申请书，申请书内容应包含申请披
+                    露的信息范围、用途及使用承诺等内容。 \n3、信息安全 \n（1）在使用本网站服务进行网上交易时，请用户妥善保护自己的个人或法人信息，仅在必要的情形下向他人提供； \n（2）如
+                    果用户发现自己的个人或法人信息泄密，尤其是用户账户或“支付账户管理”账户及密码发生泄露，请用户立即联络本网站客服，以便我们采取相应措施。\n</string>
+    <string name="agree21">​第八条 不可抗力</string>
+    <string name="agree22">因不可抗力或者其他意外事件，使得本协议的履行不可能、不必要或者无意义的，双方均不承担责任。本合同所称之不可抗力意指不能预见、不能避免并不能
+                    克服的客观情况，包括但不限于战争、台风、水灾、火灾、雷击或地震、罢工、暴动、法定疾病、黑客攻击、网络病毒、电信部门技术管制、政府行为或任何其它自然或人为造成
+                    的灾难等客观情况。\n</string>
+    <string name="agree23">第九条 保密</string>
+    <string name="agree24">用户保证在使用本网站过程中所获悉的属于【千年设计】及他方的且无法自公开渠道获得的文件及资料（包括但不限于商业秘密、公司计划、运营活动、财务信息、技
+                    术信息、经营信息及其他商业秘密）予以保密。未经该资料和文件的原提供方同意，用户不得向第三方泄露该商业秘密的全部或者部分内容。但法律、法规、行政规章另有规定或
+                    者双方另有约定的除外。\n</string>
+    <string name="agree25">第十条 法律适用及其他</string>
+    <string name="agree26">1、本协议及其规则的有效性、履行和与本协议及其规则效力有关的所有事宜，将受中华人民共和国法律管辖，任何争议仅适用中华人民共和国法律。 \n2、本网站有
+                    权受理并调处您与其他用户因交易服务产生的纠纷，同时有权单方面独立判断其他用户对您的举报及索偿是否成立，若判断索偿成立，则本网站有权划拨您已支付的担保金或
+                    交纳的保证金以及账户余额进行相应偿付。本网站没有使用自用资金进行偿付的义务，但若进行了该等支付，您应及时赔偿本网站的全部损失，否则本网站有权通过前述方式
+                    抵减相应资金或权益，如仍无法弥补损失，则本网站保留继续追偿的权利。因本网站非司法机关，您完全理解并承认，本网站对证据的鉴别能力及对纠纷的处理能力有限，受
+                    理交易纠纷完全是基于您之委托，不保证处理结果符合您的期望，本网站有权决定是否参与争议的调处。 \n3、凡因履行本协议及其规则发生的纠纷以及在【千年设计】上交易
+                    产生的所有纠纷，各方可协商解决，若协商不成的，各方一致同意提交【纠纷处理机构（公司所在地法院或者仲裁委）】，若因您的原因造成本公司损失，本公司有权要求您
+                    支付包括但是不限于律师费等全部损失。 \n4、如本协议中的任何条款无论因何种原因完全或部分无效或不具有执行力，本协议的其余条款仍应有效并且有约束力。 \n5、与本协
+                    议相关的任何本公司通知、司法文书等都将以电子邮件形式，向您的电子邮箱地址发送（您同意，如您修改原注册时提交的电子邮箱地址、并通过本公司审核的，以新电子邮
+                    箱地址为准）。该电子邮件进入前述电子邮箱接收系统时，视为送达。\n</string>
+    <string name="agree27">第十一条 【千年设计】对本服务协议包括基于本服务协议制定的各项规则拥有最终解释权。 </string>
+
+    <!--<string name="library_name">MediaPicker</string>
+    <string name="all_dir_name">All Image and Video</string>
+    <string name="all_video">All Video</string>
+    <string name="all_image">All Image</string>
+    <string name="select_title">Select Image and Video</string>
+    <string name="select_video_title">Select Video</string>
+    <string name="select_image_title">Select Image</string>
+    <string name="video_dir_name">All Video</string>
+    <string name="msg_amount_limit">Has reached the maximum number of choices</string>
+    <string name="msg_size_limit">The maximum file size is only</string>
+    <string name="select_null">please select file</string>
+    <string name="done">Done</string>
+    <string name="count_string"></string>
+    <string name="preview">Preview</string>
+    <string name="select">Select</string>
+    <string name="video">video</string>
+    <string name="cant_play_video">No program to play!</string>
+    <string name="READ_EXTERNAL_STORAGE">Need to open read storage permissions</string>-->
+    <string name="library_name">媒体选择器</string>
+    <string name="all_dir_name">所有图片和视频</string>
+    <string name="all_video">所有视频</string>
+    <string name="all_image">所有图片</string>
+    <string name="select_title">选择图片和视频</string>
+    <string name="select_video_title">选择视频</string>
+    <string name="select_image_title">选择图片</string>
+    <string name="video_dir_name">所有视频</string>
+    <string name="msg_amount_limit">已达到选择数量上限</string>
+    <string name="msg_size_limit">请压缩和剪切后上传，文件最大只支持</string>
+    <string name="select_null">请选择图片或视频</string>
+    <string name="done">完成</string>
+    <string name="count_string">个</string>
+    <string name="preview">预览</string>
+    <string name="select">选择</string>
+    <string name="video">视频</string>
+    <string name="cant_play_video">没有可以播放的程序</string>
+    <string name="READ_EXTERNAL_STORAGE">需要打开读取存储权限</string>
+
+    <!--个人中心-->
+    <string name="basic_info">基本信息</string>
+    <string name="my_code">我的二维码</string>
+    <string name="personal_booth">个人展台</string>
+    <string name="certification">实名认证</string>
+    <string name="again_certification">重新认证</string>
+    <string name="integration">积分</string>
+    <string name="personal_center">个人中心</string>
+    <string name="head">头像</string>
+    <string name="preserve">保存</string>
+    <string name="sex">性别</string>
+    <string name="age">年龄</string>
+    <string name="email">邮箱</string>
+    <string name="input_email">请输入您的邮箱地址</string>
+    <string name="qq">QQ</string>
+    <string name="input_qq">请输入您的QQ号</string>
+    <string name="wechat">微信</string>
+    <string name="input_wechat">请输入您的微信号</string>
+    <string name="details_adress">详细地址</string>
+    <string name="write_details_adress">请输入详细地址</string>
+    <string name="place">居住地</string>
+    <string name="select_place">请选择地区</string>
+    <string name="photo">拍照</string>
+    <string name="select_photo">从手机相册选择</string>
+    <string name="scan">扫描二维码</string>
+    <string name="scan_code">扫一扫下方二维码加我好友</string>
+    <string name="set_nick">设置昵称</string>
+    <string name="put_limit">请输入1-10字符以内的昵称</string>
+    <string name="man">男</string>
+    <string name="woman">女</string>
+    <string name="work">工作经验</string>
+    <string name="pro_exper">项目经验</string>
+    <string name="save_success">保存成功</string>
+    <string name="save_album">已保存到相册</string>
+    <string name="help">帮助</string>
+    <string name="quit">退出</string>
+    <string name="settings">设置</string>
+    <string name="string_help_text">当前应用缺少必要权限。\n\n请点击\"设置\"-\"权限\"-打开所需权限。\n\n最后点击两次后退按钮，即可返回。</string>
+    <string name="scanner_view_tip_text">将二维码/条码放入扫描框内，即可自动扫描</string>
+    <string name="basic_material">基本资料</string>
+    <string name="good_at_field">擅长领域</string>
+    <string name="select_good_at_field">请选择擅长领域（可多选）</string>
+    <string name="profe">职称</string>
+    <string name="select_profe">请选择职称</string>
+    <string name="working_seniority">工作年限</string>
+    <string name="select_working_seniority">请选择工作年限</string>
+    <string name="add_workexperience">添加工作经验</string>
+    <string name="edit_workexperience">编辑工作经验</string>
+    <string name="up_to_now">至今</string>
+    <string name="long_term">长期</string>
+    <string name="input_department_name">请输入部门名称</string>
+    <string name="department">部门</string>
+    <string name="department2">部门：</string>
+    <string name="positions">职位</string>
+    <string name="job">职位：</string>
+    <string name="input_positions_name">请输入职位名称</string>
+    <string name="company_scale">公司规模</string>
+    <string name="company_scale2">公司规模：</string>
+    <string name="select_company_scale">请选择公司规模</string>
+    <string name="company_nature">公司性质</string>
+    <string name="company_nature2">公司性质：</string>
+    <string name="select_company_nature">请选择公司性质</string>
+    <string name="work_descri">工作描述</string>
+    <string name="work_descri2">工作描述：</string>
+    <string name="exp_time">时间：</string>
+    <string name="pro_name">项目名称</string>
+    <string name="pro_name2">项目名称：</string>
+    <string name="input_pro_name">请输入项目名称</string>
+    <string name="pro_des">项目描述</string>
+    <string name="pro_des2">项目描述：</string>
+    <string name="input_pro_des">请输入项目描述</string>
+    <string name="personal_respons">个人职责</string>
+    <string name="personal_respons2">个人职责：</string>
+    <string name="input_personal_respons">请输入个人职责</string>
+    <string name="add_pro_experience">添加项目经验</string>
+    <string name="edit_pro_experience">编辑项目经验</string>
+    <string name="educational_experiences">教育经验</string>
+    <string name="add_educational_experiences">添加教育经验</string>
+    <string name="edit_educational_experiences">编辑教育经验</string>
+    <string name="professional_certificate">职称证书</string>
+    <string name="academic_starts">入学时间</string>
+    <string name="graduation_time">毕业时间</string>
+    <string name="school">学校</string>
+    <string name="school2">学校：</string>
+    <string name="input_school_name">请输入学校名称</string>
+    <string name="specialized_subject">专业</string>
+    <string name="specialized_subject2">专业：</string>
+    <string name="input_specialized_subject">请输入专业名称</string>
+    <string name="educational_background">学历</string>
+    <string name="educational_background2">学历：</string>
+    <string name="select_educational_background">请选择学历</string>
+    <string name="professional_description">专业描述</string>
+    <string name="professional_description2">专业描述：</string>
+    <string name="input_professional_description">请输入专业描述</string>
+    <string name="effective_time">有效时间</string>
+    <string name="certificates_name">证书名称</string>
+    <string name="input_certificates_name">请输入证书名称</string>
+    <string name="upload_certificates_name">证书原件上传</string>
+    <string name="add_certificates">添加职称证书</string>
+    <string name="eidt_certificates">编辑职称证书</string>
+    <string name="date_of_issue">发证日期</string>
+    <string name="select_date_of_issue">请选择发证日期</string>
+    <string name="end_date">结束日期</string>
+    <string name="input_end_date">请选择结束日期</string>
+    <string name="trade_certificate">专业证书</string>
+    <string name="add_trade_certificate">添加专业证书</string>
+    <string name="edit_trade_certificate">编辑专业证书</string>
+    <string name="patent_certificate_name">专利名称</string>
+    <string name="input_patent_certificate">请输入专利名称</string>
+    <string name="patent_type">专利类型</string>
+    <string name="patent_certificate">专利证书</string>
+    <string name="add_patent_certificate">添加专利证书</string>
+    <string name="edit_patent_certificate">编辑专利证书</string>
+    <string name="input_patent_type">请输入专利类型</string>
+    <string name="patent_des">专利描述</string>
+    <string name="input_patent_des">请输入专利描述</string>
+    <string name="individual_works">个人作品</string>
+    <string name="add_individual_works">添加个人作品</string>
+    <string name="edit_individual_works">编辑个人作品</string>
+    <string name="works_name">作品名称</string>
+    <string name="input_works_name">请输入作品名称</string>
+    <string name="works_des">作品描述</string>
+    <string name="law_case">案件类描述</string>
+    <string name="input_works_des">请输入作品描述</string>
+    <string name="upload_works">上传作品</string>
+    <string name="shenfen_renzheng">身份证认证</string>
+    <string name="authentication">身份验证</string>
+    <string name="user_information_authentication">用户信息认证</string>
+    <string name="real_name">真实姓名</string>
+    <string name="name">姓名：</string>
+    <string name="fillin_real_name">请填写真实姓名</string>
+    <string name="id_card">身份证号</string>
+    <string name="id_number">证件号：</string>
+    <string name="id_number_type">证件类型：</string>
+    <string name="id_number_validity">证件有效期：</string>
+    <string name="limit_age">输入年满18周岁身份证号</string>
+    <string name="expiry_time_of_id_card">身份证有效期</string>
+    <string name="back_validity">请按照身份证背面“有效期”</string>
+    <string name="validity">背面“有效期”</string>
+    <string name="permanent_residence_address">户籍地址</string>
+    <string name="input_permanent_residence_address">请输入户籍地址</string>
+    <string name="take_upload_card">拍摄/上传您的二代身份证</string>
+    <string name="submit_audit">提交审核</string>
+    <string name="cer_sumbit_success">实名认证申请提交成功</string>
+    <string name="cer_sumbit_fail">抱歉，个人实名认证审核失败</string>
+    <string name="cer_imperfect">抱歉，企业实名认证未全部完成</string>
+    <string name="examine_and_verify">请耐心等待，我们会在1-3个工作日内完成审核</string>
+    <string name="cer_success">个人认证成功</string>
+    <!--实名认证-->
+    <!--权限申请-->
+    <string name="permission_camra">相机权限被禁用，请前往权限管理设置相机权限</string>
+    <string name="permission_audio">录音权限被禁用，请前往权限管理设置录音权限</string>
+    <string name="permission_storage">文件读取权限被禁用，请前往权限管理设置文件读取权限</string>
+    <string name="permission_camra_storage">文件读取权限或相机权限被禁用，请前往权限管理设置文件读取或相机权限</string>
+    <string name="permission_audio_storage">文件读取权限或录音权限被禁用，请前往权限管理设置文件读取或录音权限</string>
+
+    <!--企业中心-->
+    <string name="enter_center" translatable="false">企业中心</string>
+    <string name="enter_code">企业二维码</string>
+    <string name="enter_booth">企业展台</string>
+    <string name="enter_certification">企业实名认证</string>
+    <string name="enter_user_name">用户名</string>
+    <string name="enter_name">企业名称</string>
+    <string name="enter_name2">企业名称：</string>
+    <string name="fixed_phone">固定电话 :</string>
+    <string name="input_fixed_phone">请输入固定电话</string>
+    <string name="area">地区</string>
+    <string name="company_profile">公司简介：</string>
+    <string name="company_profile2">公司简介</string>
+    <string name="area_info">地区信息</string>
+    <string name="com_introduction">公司介绍</string>
+    <string name="established_time2">公司成立时间</string>
+    <string name="select_established_time">请选择时间</string>
+    <string name="add_com_introduction">添加公司介绍</string>
+    <string name="edit_com_introduction">编辑公司介绍</string>
+    <string name="input_com_introduction">请输入公司简介</string>
+    <string name="add_team_introduction">添加团队介绍</string>
+    <string name="edit_team_introduction">编辑团队介绍</string>
+    <string name="depart">部门名称</string>
+    <string name="input_depart">请输入团队介绍</string>
+    <string name="company_qualification">公司资质</string>
+    <string name="qualification_name">资质名称</string>
+    <string name="input_qualification_name">请输入资质名称</string>
+    <string name="add_company_qualification">添加公司资质</string>
+    <string name="edit_company_qualification">编辑公司资质</string>
+    <string name="company_patent">公司专利</string>
+    <string name="add_company_case">添加公司案例</string>
+    <string name="edit_company_case">编辑公司案例</string>
+    <string name="case_name">案例名称</string>
+    <string name="input_case_name">请输入案例名称</string>
+    <string name="enter_realname_cer">企业实名认证</string>
+    <string name="input_enter_realname">请输入与营业执照上一致的名称</string>
+    <string name="credit_code">统一社会信用代码</string>
+    <string name="input_credit_code">请输入统一社会信用代码</string>
+    <string name="location_business_license">营业执照所在地</string>
+    <string name="select_location_business_license">请选择营业执照所在地</string>
+    <string name="specific_address">具体地址</string>
+    <string name="input_specific_address">请输入正确的地址</string>
+    <string name="business_term">营业期限</string>
+    <string name="select_business_term">请选择营业期限</string>
+    <string name="business_scope">经营范围</string>
+    <string name="input_business_scope">请输入正确的经营范围</string>
+    <string name="scanning_copy_of_business_license">营业执照副本扫描件</string>
+    <string name="legal_person_authentication">企业法人实名认证</string>
+    <string name="continue_certification">继续认证</string>
+    <string name="enter_cer_sumbit_fail">抱歉，企业实名认证审核失败</string>
+    <string name="enter_cer_success">企业认证成功</string>
+
+    <!--设置-->
+    <string name="account_security">账号安全</string>
+    <string name="about_us">关于千年</string>
+    <string name="secret">隐私</string>
+    <string name="change_phone">更换手机号</string>
+    <string name="reset_pwd">重置密码</string>
+    <string name="cancellation_account">注销帐号</string>
+    <string name="current_mobile_number">当前手机号： </string>
+    <string name="mobile_vildate">手机验证</string>
+    <string name="input_mobile_vildate">输入验证码</string>
+    <string name="rebind_phone">重新绑定手机</string>
+    <string name="sumbit">提交</string>
+    <string name="input_new_phone">输入新的手机号：</string>
+    <string name="send_current_mobile_number">已发送至当前手机号：</string>
+    <string name="old_pwd">旧密码</string>
+    <string name="old_pwd_error">旧密码输入错误</string>
+    <string name="pwd_modify">密码修改</string>
+    <string name="cannot_same_as_old_password">新密码不能与旧密码相同</string>
+    <string name="user_logoff_protocol">用户注销协议</string>
+    <string name="logoff_protocol">《用户注销协议》</string>
+    <string name="logoff">在您注销您的千年设计平台账号之前， 请您充分阅读、 理解并同意下列事项: </string>
+    <string name="logoff1">1. 您所申请注销的千年设计平台账号应当是您本人依照千年设计平台《 用户服务协议》 的约定注册的账号。 您应当依照本公司规定的程序或网站上的提示进行千年设计平台账号注销。\n </string>
+    <string name="logoff2">2. 注销账号是不可恢复的操作， 您将无法再使用该账号或找回您添加或绑定在该账号上的任何内容、 信息及会员、 积分、 等级相关权益（ 即使您使用相同的手机号码再次注册并使用千年设计平台）， 您应自行备份该账号相关的信息和数据。 操作之前， 请确认与该账号相关的所有交易及服务均已进行妥善处理。\n</string>
+    <string name="logoff3">3. 千年设计平台账号注销将导致千年设计平台《 用户服务协议》 及相关规则约定的双方的权利义务终止（ 依本协议其他条款另行约定不得终止的或依其性质不能终止的除外）， 同时还可能对于该账号产生如下结果， 且均由您自行承担：</string>
+    <string name="logoff3a">A.该账号的全部个人资料和历史信息都将无法找回；</string>
+    <string name="logoff3b">B.该账号的联系人将无法通过该账号联系您；</string>
+    <string name="logoff3c">C.该账号如有未使用完毕的会员权益都将同时作废， 相应费用将不予退回；</string>
+    <string name="logoff3d">D.任何您之前累计的会员等级、 权益等都将作废且无法恢复；</string>
+    <string name="logoff3e">E.任何兑换代码（ 购物券、 礼品券、 积分或优惠券等） 都将作废；</string>
+    <string name="logoff3f">F.任何绑定的银行卡或支付提现服务将不能适用该账号内的支付或提现服务；\n</string>
+    <string name="logoff4">4. 注销千年设计平台账号前， 您需妥善处理千年设计平台账号下所有资金和交易问题。 您申请注销的千年设计平台账号应当不存在任何由于该账号被注销而导致的未了结的合同关系与其他基于该账号的存在而产生或维持的权利义务， 及本公司认为注销该账号会由此产生未了结的权利义务而产生纠纷的情况。 在千年设计平台账号注销期间， 如果您的千年设计平台账号被他人投诉、 被国家机关调查或者正处于诉讼、 仲裁程序中， 或被发现有任何情况， 我公司有权自行终止您千年设计平台账号的注销而无需另行得到您的同意。 账号注销必须符合以下条件：</string>
+    <string name="logoff4a">A.该账号处于安全状态（ 近期一个月内， 没有进行过修改密码等操作）； </string>
+    <string name="logoff4b">B.该账户没有进行中的交易或余额、 欠款、 纠纷记录；</string>
+    <string name="logoff4c">C.该账号无未完成的项目和咨询服务；\n </string>
+    <string name="logoff5">5. 您同意， 如您申请注销千年设计平台账号时， 本公司尚在或需要对您的有关交易或账号进行核查的， 本公司有权继续冻结您的千年设计平台账号或账号内全部或部分资金以便继续核查， 并在必要时有权向监管或司法部门举报欺诈或非法行为。 注销您的千年设计平台账号并不代表该账号注销前的账号行为和相关责任得到豁免或减轻。\n</string>
+    <string name="logoff6">6. 本协议未尽事宜， 参照 千年设计平台上的千年设计平台《 用户服务协议》 及相关规则执行\n</string>
+    <string name="logoff7">7. 本协议有关内容的最终解释权归本公司所有\n</string>
+    <string name="our_company_name">上海千年城市规划工程设计股份有限公司版权所有</string>
+    <string name="eng_name">Copyright ©2018-2021 沪ICP备17033132号-1</string>
+    <string name="take_care">注意，注销账号后以下信息将被清空且无法找回</string>
+    <string name="not_be_retrieved">该账号的全部个人资料和历史信息都将无法找回；</string>
+    <string name="unable_to_contact">该账号的联系人将无法通过该账号联系您；</string>
+    <string name="cancellation_membership_interests">该账号如有未使用完毕的会员权益都将同时作废，相应费用将不予退回；</string>
+    <string name="no_revert">任何您之前累计的会员等级、权益等都将作废且无法恢复；</string>
+    <string name="exchange_code_void">任何兑换代码（购物券、礼品券、积分或优惠券等）都将作废；</string>
+    <string name="cancellation_payment">任何绑定的银行卡或支付提现服务将不能适用该账号内的支付或提现服务；</string>
+    <string name="abandonment">*请确保所有交易已完结且无纠纷，账户删除后的历史交易可能产生的自己退回权利等将视作自动放弃</string>
+    <string name="next_agree">点击【下一步】即代表你已经同意</string>
+    <string name="cancelled">您的帐号已经被注销</string>
+
+
+    <string name="toast_press_again_quit">再按一次退出程序</string>
+
+    <string name="str_yearago">年前</string>
+    <string name="str_monthago">月前</string>
+    <string name="str_daysago">天前</string>
+    <string name="str_hoursago">小时前</string>
+    <string name="str_minsago">分钟前</string>
+    <string name="str_secondago">秒前</string>
+
+    <!--我的任务-->
+    <string name="task_total" translatable="false">任务总数</string>
+    <string name="al_complete" translatable="false">已完成</string>
+    <string name="al_close" translatable="false">已关闭</string>
+    <string name="in_progress" translatable="false">进行中</string>
+    <string name="be_activated" translatable="false">待启动</string>
+    <string name="task_pause" translatable="false">暂停中</string>
+    <string name="finish_on_time" translatable="false">按时完成</string>
+    <string name="overdue" translatable="false">已逾期</string>
+    <string name="overdue_completion" translatable="false">逾期完成</string>
+    <string name="dept" translatable="false">所属部门</string>
+    <string name="task_distribution" translatable="false">任务分布</string>
+    <string name="required_profession" translatable="false">所需专业</string>
+    <string name="sta" translatable="false">状态</string>
+    <string name="my_needs" translatable="false">我的需求</string>
+    <string name="my_project" translatable="false">我的项目</string>
+    <string name="my_task" translatable="false">我的任务</string>
+    <string name="my_library" translatable="false">我的文库</string>
+    <string name="my_work_clip" tools:ignore="MissingTranslation">我的工作夹</string>
+    <string name="create_task" tools:ignore="MissingTranslation">创建任务</string>
+    <string name="task_name" translatable="false">任务名称</string>
+    <string name="task_num" tools:ignore="MissingTranslation">编号</string>
+    <string name="task_belong" tools:ignore="MissingTranslation">所属部门/分公司</string>
+    <string name="task_major" tools:ignore="MissingTranslation">专业</string>
+    <string name="task_des" tools:ignore="MissingTranslation">任务描述</string>
+    <string name="des" tools:ignore="MissingTranslation">描述</string>
+    <string name="annex" tools:ignore="MissingTranslation">附件</string>
+    <string name="upload_annex" tools:ignore="MissingTranslation">上传附件</string>
+    <string name="depatu" tools:ignore="MissingTranslation">部门/分公司</string>
+    <string name="task_details" tools:ignore="MissingTranslation">任务详情</string>
+    <string name="task_member" tools:ignore="MissingTranslation">任务成员</string>
+    <string name="member" tools:ignore="MissingTranslation">成员</string>
+    <string name="task_attachment" tools:ignore="MissingTranslation">任务附件</string>
+    <string name="edit_des" tools:ignore="MissingTranslation">编辑记录</string>
+    <string name="his_des" tools:ignore="MissingTranslation">历史描述</string>
+    <string name="look_task" tools:ignore="MissingTranslation">查看任务</string>
+    <string name="edit_task" tools:ignore="MissingTranslation">编辑任务</string>
+    <string name="task_dynamics" tools:ignore="MissingTranslation">任务动态</string>
+
+    <!--咨询大厅-->
+    <string name="unlimited">不限</string>
+    <string name="consultation_hall">咨询</string>
+    <string name="consultation_count">咨询次数：</string>
+    <string name="worl_exp">工作经验：</string>
+    <string name="per_details">个人详情</string>
+
+    <!--文库-->
+    <string name="Library_hall">文库</string>
+    <string name="author">作者：</string>
+    <string name="reader">阅读：</string>
+    <string name="upload_date">上传时间：</string>
+
+    <!--项目大厅-->
+    <string name="subject_hall">项目</string>
+    <string name="required_categories">所需类别</string>
+    <string name="required_prof">所需专业</string>
+    <string name="sort">排序</string>
+    <string name="amount_money">金额：</string>
+    <string name="publish_time">发布时间：</string>
+    <string name="publish_date">发布时间</string>
+    <string name="category">类别：</string>
+    <string name="subject_details">项目详情</string>
+    <string name="subject_num">项目编号</string>
+    <string name="honesty_score">诚信评分</string>
+    <string name="project_location">项目所在地</string>
+    <string name="deadline_for_bidding">招标截止时间</string>
+    <string name="collect">收藏</string>
+    <string name="bid_now">立即投标</string>
+    <string name="bid_message">投标留言</string>
+    <string name="sure_bid">确认投标</string>
+    <string name="design_cost">设计费用</string>
+    <string name="down">下载</string>
+
+    <!--webrtc test-->
+    <string name="join_room">Join</string>Back validity
+    <string name="room_tips">Input room name: </string>
+    <string name="server_tips">Input server addr: </string>
+    <string name="default_server">http://rtc-signal.jhuster.com:8080/socket.io/</string>
+
+</resources>
