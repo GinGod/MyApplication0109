@@ -9,11 +9,17 @@ import com.orhanobut.logger.Logger;
 import com.orhanobut.logger.PrettyFormatStrategy;
 
 public class MyApplication extends Application {
+    private static MyApplication instance = null;
 
     @Override
     public void onCreate() {
         super.onCreate();
+        instance = this;
         initLogger();
+    }
+
+    public synchronized static MyApplication getInstance() {
+        return instance;
     }
 
     /**

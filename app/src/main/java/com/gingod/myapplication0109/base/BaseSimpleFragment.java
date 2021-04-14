@@ -11,6 +11,7 @@ import android.widget.Toast;
 
 import com.alibaba.fastjson.JSON;
 import com.gingod.myapplication0109.R;
+import com.gingod.myapplication0109.config.CommonConfig;
 import com.gingold.basislibrary.Base.BasisMuliMethodFragment;
 import com.google.gson.Gson;
 import com.orhanobut.logger.Logger;
@@ -234,7 +235,7 @@ public abstract class BaseSimpleFragment extends BasisMuliMethodFragment {
         try {
             //微服务结果处理
             CommonBean commonBean = JSON.parseObject(json, CommonBean.class);
-            if (commonBean.code == CommonConfig.REQUEST_SUCCESS) {
+            if (commonBean.code == CommonConfig .REQUEST_SUCCESS) {
                 putNetSuccessMethod(json, flag, commonBean);
                 doNetSuccess(flag);
             } else if (commonBean.code != CommonConfig.zero) {

@@ -2,16 +2,13 @@ package com.gingod.myapplication0109;
 
 import android.net.http.SslError;
 import android.os.Build;
-import android.os.Bundle;
 import android.webkit.SslErrorHandler;
-import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 
 import com.gingod.myapplication0109.base.BaseSimpleActivity;
 
 import butterknife.BindView;
-import butterknife.ButterKnife;
 
 public class TestPicWidthWebViewActivity1 extends BaseSimpleActivity {
     String content = "<div style=\"text-align:center;\">\n" +

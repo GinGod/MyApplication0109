@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="RoundnessProgressBar">
+        <attr name="roundColor" format="color"/>
+        <attr name="roundProgressColor" format="color"/>
+        <attr name="roundWidth" format="dimension"></attr>
+        <attr name="innerRoundColor" format="color" />
+        <attr name="textColor" format="color" />
+        <attr name="textSize" format="dimension" />
+        <attr name="max" format="integer"></attr>
+        <attr name="textIsDisplayable" format="boolean"></attr>
+        <attr name="style">
+            <enum name="STROKE" value="1"></enum>
+            <enum name="FILL" value="1"></enum>
+        </attr>
+    </declare-styleable>
+
+    <declare-styleable name="ShadowContainer">
+        <attr name="containerShadowColor" format="color"/>
+        <attr name="containerShadowRadius" format="dimension"/>
+        <attr name="containerDeltaLength" format="dimension"/>
+        <attr name="containerCornerRadius" format="dimension"/>
+        <attr name="deltaX" format="dimension"/>
+        <attr name="deltaY" format="dimension"/>
+        <attr name="enable" format="boolean"/>
+    </declare-styleable>
+
+    <declare-styleable name="ShadowLayout">
+        <!--阴影的圆角大小-->
+        <attr name="yc_cornerRadius" format="dimension" />
+        <!--阴影的扩散范围(也可以理解为扩散程度)-->
+        <attr name="yc_shadowLimit" format="dimension" />
+        <!--阴影颜色-->
+        <attr name="yc_shadowColor" format="color" />
+        <!--x轴的偏移量-->
+        <attr name="yc_dx" format="dimension" />
+        <!--y轴的偏移量-->
+        <attr name="yc_dy" format="dimension" />
+        <!--左边是否显示阴影-->
+        <attr name="yc_leftShow" format="boolean" />
+        <!--右边是否显示阴影-->
+        <attr name="yc_rightShow" format="boolean" />
+        <!--上边是否显示阴影-->
+        <attr name="yc_topShow" format="boolean" />
+        <!--下面是否显示阴影-->
+        <attr name="yc_bottomShow" format="boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="CTTourHeaderScrollView">
+        <attr name="top_offset" format="dimension" />
+    </declare-styleable>
+
+    <!--tablayout分割线-->
+    <declare-styleable name="TabLayoutLine">
+        <!--默认数量-->
+        <attr name="selectedNum" format="integer" />
+    </declare-styleable>
+
+    <declare-styleable name="RingView">
+        <attr name="outer_ring_radius" format="dimension"/>
+        <attr name="inner_ring_radius" format="dimension"/>
+    </declare-styleable>
+
+    <!-- 饼状图 -->
+    <declare-styleable name="PieChartView">
+        <attr name="pie_size" format="dimension"/><!-- 饼状图的直径 -->
+        <attr name="pie_space" format="float"/><!-- 饼状图间隔尺寸 -->
+        <attr name="open_animation" format="boolean"/><!-- 是否开启动画 -->
+        <attr name="show_tip" format="boolean"/><!-- 是否显示提示说明的线 -->
+    </declare-styleable>
+
+</resources>

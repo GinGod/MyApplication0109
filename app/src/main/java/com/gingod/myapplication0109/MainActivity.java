@@ -34,7 +34,8 @@ import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.chad.library.adapter.base.listener.OnItemClickListener;
 import com.chad.library.adapter.base.viewholder.BaseViewHolder;
 import com.gingod.myapplication0109.base.BaseSimpleActivity;
-import com.gingod.myapplication0109.base.CommonConfig;
+import com.gingod.myapplication0109.common.SelectFileActivity;
+import com.gingod.myapplication0109.config.CommonConfig;
 import com.orhanobut.logger.Logger;
 import com.othershe.combinebitmap.CombineBitmap;
 import com.othershe.combinebitmap.layout.DingLayoutManager;
@@ -136,7 +137,10 @@ public class MainActivity extends BaseSimpleActivity {
                         openActivity(OpenFileActivity2.class);
                         break;
                     case 4:
-                        openActivity(OpenFileActivity3.class);
+//                        openActivity(OpenFileActivity3.class);
+                        openActivity(SelectFileActivity.class);
+                        break;
+                    case 5:
                         break;
                 }
             }

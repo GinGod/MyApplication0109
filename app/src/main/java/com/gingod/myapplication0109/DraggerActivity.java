@@ -1,7 +1,5 @@
 package com.gingod.myapplication0109;
 
-import android.os.Bundle;
-
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.recyclerview.widget.StaggeredGridLayoutManager;
 
@@ -13,7 +11,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 import butterknife.BindView;
-import butterknife.ButterKnife;
 import butterknife.OnClick;
 
 public class DraggerActivity extends BaseSimpleActivity {
