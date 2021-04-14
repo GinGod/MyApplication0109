@@ -129,6 +129,15 @@ public class MainActivity extends BaseSimpleActivity {
                     case 1:
                         openActivity(TestPicWidthWebViewActivity1.class);
                         break;
+                    case 2:
+                        openActivity(OpenFileActivity.class);
+                        break;
+                    case 3:
+                        openActivity(OpenFileActivity2.class);
+                        break;
+                    case 4:
+                        openActivity(OpenFileActivity3.class);
+                        break;
                 }
             }
         });

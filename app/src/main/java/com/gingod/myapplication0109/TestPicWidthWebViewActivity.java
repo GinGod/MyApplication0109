@@ -43,6 +43,7 @@ public class TestPicWidthWebViewActivity extends BaseWebviewActivity2 {
 
     @Override
     public void loadUrl() {
+        loadNoCache();
         mWebview.loadUrl("https://library.1000dpt.com:444/editor/details?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2MTk5MjQ5NTc3MzksInBheWxvYWQiOiJ7XCJ1c2VyVHlwZVwiOjEsXCJ1c2VySWRcIjoxNDYxLFwiYWNjb3VudFwiOlwiWDE4RTBuNzhcIn0ifQ.JwEx1Mp-ZXBkWCUhfv4wdga0tq4kOVjDp_d39oOH-4s&type=Android&articleId=1946211641");
         mWebview.loadUrl("https://privacy.1000dpt.com/文库交易说明.html");
         mWebview.loadDataWithBaseURL(null, content, "text/html", "utf-8", null);

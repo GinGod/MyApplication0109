@@ -45,4 +45,5 @@ dependencies {
     implementation 'com.github.GinGod:BasisDependency:v1.1.6'
     //阴影效果
     implementation 'com.github.lihangleo2:ShadowLayout:3.1.6'
+    implementation 'com.github.barteksc:android-pdf-viewer:3.2.0-beta.1'
 }

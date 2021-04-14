@@ -49,6 +49,9 @@
 
         <activity android:name=".TestPicWidthWebViewActivity" />
         <activity android:name=".TestPicWidthWebViewActivity1" />
+        <activity android:name=".OpenFileActivity" />
+        <activity android:name=".OpenFileActivity2" />
+        <activity android:name=".OpenFileActivity3" />
     </application>
 
 </manifest>

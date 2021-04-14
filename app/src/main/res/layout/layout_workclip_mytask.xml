@@ -16,8 +16,7 @@
 
         <RelativeLayout
             android:layout_width="60dp"
-            android:layout_height="60dp"
-            android:background="@drawable/bg_circle_white">
+            android:layout_height="60dp">
 
         </RelativeLayout>
 

@@ -55,7 +55,8 @@ public class TestPicWidthWebViewActivity1 extends BaseSimpleActivity {
         //设置支持缩放
         //                wvPicwidthwebview.getSettings().setBuiltInZoomControls(true);
 //        wvPicwidthwebview.setWebViewClient(new ArticleWebViewClient());
-        wvPicwidthwebview.loadDataWithBaseURL(null, content, "text/html", "utf-8", null);
+//        wvPicwidthwebview.loadDataWithBaseURL(null, content, "text/html", "utf-8", null);
+        wvPicwidthwebview.loadUrl("file:///android_asset/text.html");
     }
 
     private class ArticleWebViewClient extends WebViewClient {

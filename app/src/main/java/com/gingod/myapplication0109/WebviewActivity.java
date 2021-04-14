@@ -183,7 +183,9 @@ public class WebviewActivity extends BaseSimpleActivity {
 
         Map<String, String> map = new HashMap<String, String>();
 //        map.put("access_token", LoginUtil.getLoginToken(this));
-        mWebview.loadUrl(html_url, map);
+//        mWebview.loadUrl(html_url, map);
+//        mWebview.loadUrl("file:///android_asset/text.html");
+        mWebview.loadUrl("https://www.baidu.com");
     }
 
     //点击返回上一页面而不是退出浏览器
