@@ -5,11 +5,13 @@ import android.app.Dialog;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Bitmap;
+import android.graphics.pdf.PdfRenderer;
 import android.media.MediaMetadataRetriever;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Environment;
+import android.os.ParcelFileDescriptor;
 import android.provider.MediaStore;
 import android.provider.Settings;
 import android.text.Editable;
@@ -49,8 +51,11 @@ import com.tbruyelle.rxpermissions3.Permission;
 import com.tbruyelle.rxpermissions3.RxPermissions;
 
 import java.io.File;
+import java.io.FileOutputStream;
+import java.io.InputStream;
 import java.io.UnsupportedEncodingException;
 import java.net.URLEncoder;
+import java.text.DecimalFormat;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
@@ -70,7 +75,6 @@ import io.reactivex.rxjava3.functions.Consumer;
  * @author
  */
 public class CommonUtils {
-
 
 
     /**
@@ -276,7 +280,7 @@ public class CommonUtils {
             String duration = media.extractMetadata(MediaMetadataRetriever.METADATA_KEY_DURATION);
             Long time = Long.parseLong(duration);
             return Utils.long2String(time);
-        } catch (IllegalArgumentException e) {
+        } catch (Exception e) {
             e.printStackTrace();
         }
         return "";
@@ -323,9 +327,6 @@ public class CommonUtils {
         }
         return phone;
     }
-
-
-
 
 
     /**
@@ -408,7 +409,6 @@ public class CommonUtils {
     }
 
 
-
     /**
      * 要求外部订单号必须唯一。
      *
@@ -462,7 +462,6 @@ public class CommonUtils {
     }
 
 
-
     /**
      * 设置
      */
@@ -475,7 +474,6 @@ public class CommonUtils {
             }
         }
     }
-
 
 
     /**
@@ -516,7 +514,6 @@ public class CommonUtils {
     }
 
 
-
     /**
      * pdf阅读
      *
@@ -543,5 +540,85 @@ public class CommonUtils {
         } catch (Exception e) {
             e.printStackTrace();
         }
+    }
+
+    /**
+     * 获取pdf文件某页Bitmap
+     *
+     * @param mActivity
+     * @param file
+     * @param page
+     * @return
+     */
+    public static Bitmap getPdfPageBitmap(Context mActivity, File file, int page) {
+        try {
+            ParcelFileDescriptor open = ParcelFileDescriptor.open(file, ParcelFileDescriptor.MODE_READ_ONLY);
+            PdfRenderer pdfRenderer = new PdfRenderer(open);
+            return CommonUtils.renderPage(mActivity, pdfRenderer.openPage(page));
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
+
+    /**
+     * 返回每页的Bitmap
+     *
+     * @param mActivity
+     * @param page
+     * @return
+     */
+    public static Bitmap renderPage(Context mActivity, PdfRenderer.Page page) {
+        try {
+            Bitmap bitmap = Bitmap.createBitmap(BasisDisplayUtils.getScreenWidth(mActivity), page.getHeight() * BasisDisplayUtils.getScreenWidth(mActivity) / page.getWidth(), Bitmap.Config.ARGB_8888);
+            page.render(bitmap, null, null, PdfRenderer.Page.RENDER_MODE_FOR_DISPLAY);
+            page.close();
+            return bitmap;
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
+
+
+    /**
+     * 将assets下的文件放到sd指定目录下
+     *
+     * @param context    上下文
+     * @param assetsPath assets下的路径
+     */
+    public static String putAssetsToSDCard(Context context, String assetsPath) {
+        try {
+            InputStream mIs = context.getAssets().open(assetsPath);
+            byte[] mByte = new byte[1024 * 8];
+            int bt = 0;
+            File file = new File(Environment.getExternalStorageDirectory() + File.separator + assetsPath);
+            if (!file.exists()) {
+                file.createNewFile();
+            } else {
+                return file.getAbsolutePath();
+            }
+            FileOutputStream fos = new FileOutputStream(file);
+            while ((bt = mIs.read(mByte)) != -1) {
+                fos.write(mByte, 0, bt);
+            }
+            fos.flush();
+            mIs.close();
+            fos.close();
+            return file.getAbsolutePath();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return "";
+    }
+
+    /**
+     * 保留6位小数
+     *
+     * @param o
+     * @return
+     */
+    public static String getFormat6(Object o) {
+        return new DecimalFormat("0.000000").format(o);
     }
 }

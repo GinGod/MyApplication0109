@@ -4,7 +4,8 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <androidx.core.widget.NestedScrollView
+    <com.gingod.myapplication0109.view.MyScrollView
+        android:id="@+id/sw_open_file"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
@@ -15,17 +16,23 @@
 
             <com.github.barteksc.pdfviewer.PDFView
                 android:id="@+id/pdfView"
-                android:background="@color/darker_gray"
                 android:layout_width="match_parent"
-                android:layout_height="252dp" />
+                android:layout_height="352dp"
+                android:background="@color/light_grey" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                android:background="@color/red"/>
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/rv_openfile"
+                android:layout_marginTop="6dp"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent" />
 
         </LinearLayout>
-    </androidx.core.widget.NestedScrollView>
+    </com.gingod.myapplication0109.view.MyScrollView>
 
     <!--    <com.gingod.myapplication0109.ZoomView-->
     <!--        android:layout_width="match_parent"-->

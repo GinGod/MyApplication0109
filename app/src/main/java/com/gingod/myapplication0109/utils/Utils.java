@@ -44,7 +44,6 @@ public class Utils {
     }
 
 
-
     /**
      * 返回当前时间的格式为 yyyyMMddHHmmss
      *
@@ -95,7 +94,7 @@ public class Utils {
             SimpleDateFormat sdf = new SimpleDateFormat("yyyyMMddHHmmssSSS");
             Date parse = sdf.parse(id);
             time = parse.getTime();
-        } catch (ParseException e) {
+        } catch (Exception e) {
             e.printStackTrace();
         }
         return time;
@@ -103,23 +102,28 @@ public class Utils {
 
     //毫秒转秒
     public static String long2String(long time) {
-        //毫秒转秒
-        int sec = (int) time / 1000;
-        int min = sec / 60;    //分钟
-        sec = sec % 60;        //秒
-        if (min < 10) {    //分钟补0
-            if (sec < 10) {    //秒补0
-                return "0" + min + ":0" + sec;
+        try {
+            //毫秒转秒
+            int sec = (int) time / 1000;
+            int min = sec / 60;    //分钟
+            sec = sec % 60;        //秒
+            if (min < 10) {    //分钟补0
+                if (sec < 10) {    //秒补0
+                    return "0" + min + ":0" + sec;
+                } else {
+                    return "0" + min + ":" + sec;
+                }
             } else {
-                return "0" + min + ":" + sec;
+                if (sec < 10) {    //秒补0
+                    return min + ":0" + sec;
+                } else {
+                    return min + ":" + sec;
+                }
             }
-        } else {
-            if (sec < 10) {    //秒补0
-                return min + ":0" + sec;
-            } else {
-                return min + ":" + sec;
-            }
+        } catch (IllegalArgumentException e) {
+            e.printStackTrace();
         }
+        return "";
     }
 
     /**

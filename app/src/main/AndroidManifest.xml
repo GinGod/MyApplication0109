@@ -53,6 +53,8 @@
         <activity android:name=".OpenFileActivity2" />
         <activity android:name=".OpenFileActivity3" />
         <activity android:name=".common.SelectFileActivity" />
+        <activity android:name=".common.SelectMultiFileActivity" />
+        <activity android:name=".SignActivity" />
     </application>
 
 </manifest>

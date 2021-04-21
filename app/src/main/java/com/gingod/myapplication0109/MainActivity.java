@@ -35,6 +35,7 @@ import com.chad.library.adapter.base.listener.OnItemClickListener;
 import com.chad.library.adapter.base.viewholder.BaseViewHolder;
 import com.gingod.myapplication0109.base.BaseSimpleActivity;
 import com.gingod.myapplication0109.common.SelectFileActivity;
+import com.gingod.myapplication0109.common.SelectMultiFileActivity;
 import com.gingod.myapplication0109.config.CommonConfig;
 import com.orhanobut.logger.Logger;
 import com.othershe.combinebitmap.CombineBitmap;
@@ -131,16 +132,19 @@ public class MainActivity extends BaseSimpleActivity {
                         openActivity(TestPicWidthWebViewActivity1.class);
                         break;
                     case 2:
-                        openActivity(OpenFileActivity.class);
+                        openActivity(SignActivity.class);
                         break;
                     case 3:
                         openActivity(OpenFileActivity2.class);
                         break;
                     case 4:
-//                        openActivity(OpenFileActivity3.class);
                         openActivity(SelectFileActivity.class);
                         break;
                     case 5:
+                        openActivity(SelectMultiFileActivity.class);
+                        break;
+                    case 6:
+                        openActivity(OpenFileActivity.class);
                         break;
                 }
             }

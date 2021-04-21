@@ -4,10 +4,55 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <com.github.barteksc.pdfviewer.PDFView
-        android:id="@+id/pdfView"
-        android:background="@color/darker_gray"
+    <include layout="@layout/activity_common_header3" />
+
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="match_parent">
+
+        <com.github.barteksc.pdfviewer.PDFView
+            android:id="@+id/pdfView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/darker_gray" />
+
+        <RelativeLayout
+            android:id="@+id/ll_openfile2_sign"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/line_color">
+
+            <TextView
+                android:id="@+id/tv_openfile2_sign"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:gravity="center"
+                android:text="11"
+                android:textColor="@color/red"
+                android:textSize="15sp" />
+
+            <RelativeLayout
+                android:id="@+id/ll_openfile2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true">
+
+
+                <ImageView
+                    android:id="@+id/iv_openfile2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <ImageView
+                    android:id="@+id/iv_openfile2_seal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/back" />
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
 
 </com.gingod.myapplication0109.view.LinearLayoutWithStatusBar>
