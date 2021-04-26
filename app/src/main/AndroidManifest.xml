@@ -60,6 +60,11 @@
             android:name=".TestVideoFullActivity"
             android:configChanges="orientation|keyboardHidden|navigation|screenSize"
             android:hardwareAccelerated="true" />
+
+        <activity
+            android:name=".TestVideoFullActivity2"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize"
+            android:hardwareAccelerated="true" />
     </application>
 
 </manifest>

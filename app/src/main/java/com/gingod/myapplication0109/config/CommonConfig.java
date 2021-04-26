@@ -154,12 +154,12 @@ public class CommonConfig {
     public static List<String> getFieldList() {
         List<String> fieldList = new ArrayList<>();
         fieldList.add("全部");
-        fieldList.add("市政");
+        fieldList.add("视频全屏");
         fieldList.add("测试签章");
         fieldList.add("测试签章");
         fieldList.add("文件筛选");
         fieldList.add("文件筛选-可查看任意文件夹");
-        fieldList.add("建筑");
+        fieldList.add("视频全屏");
         fieldList.add("结构");
         fieldList.add("交通");
         fieldList.add("桥梁");

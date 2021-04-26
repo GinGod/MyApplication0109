@@ -67,6 +67,8 @@ public abstract class BaseWebviewActivity2 extends BaseSimpleActivity {
     public View mCustomView;
     public WebChromeClient.CustomViewCallback mCustomViewCallback;
 
+    public boolean screenOrientationState = false;
+
     @Override
     public void initData() {
         super.initData();
@@ -234,22 +236,16 @@ public abstract class BaseWebviewActivity2 extends BaseSimpleActivity {
                 }
             }
 
-            @Nullable
-            @Override
-            public View getVideoLoadingProgressView() {
-                return super.getVideoLoadingProgressView();
-            }
-
             @Override
             public void onShowCustomView(View view, CustomViewCallback callback) {
-                super.onShowCustomView(view, callback);
                 showCustomView(view, callback);
+                super.onShowCustomView(view, callback);
             }
 
             @Override
             public void onHideCustomView() {
-                super.onHideCustomView();
                 hideCustomView();
+                super.onHideCustomView();
             }
         });
 
@@ -309,7 +305,10 @@ public abstract class BaseWebviewActivity2 extends BaseSimpleActivity {
                     ViewGroup.LayoutParams.MATCH_PARENT,
                     ViewGroup.LayoutParams.MATCH_PARENT));
             mWebview.setVisibility(View.GONE);
-//            setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
+            loge(decor.getWidth() + " " + decor.getHeight());
+            if (screenOrientationState) {
+                setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
+            }
             //全屏
             getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
                     WindowManager.LayoutParams.FLAG_FULLSCREEN);

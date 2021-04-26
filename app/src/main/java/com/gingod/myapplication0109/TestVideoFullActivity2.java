@@ -2,7 +2,7 @@ package com.gingod.myapplication0109;
 
 import com.gingod.myapplication0109.base.BaseWebviewActivity2;
 
-public class TestVideoFullActivity extends BaseWebviewActivity2 {
+public class TestVideoFullActivity2 extends BaseWebviewActivity2 {
     String content = "<div style=\"text-align:center;\">\n" +
             "\t<span style=\"font-size:14px;\">项目位于云南省曲靖市师宗县，是城市公共活动的核心区域，也是一个以文笔塔为核心的生态休闲公园，规划设计面积为130公顷。</span> \n" +
             "</div>\n" +
@@ -28,6 +28,7 @@ public class TestVideoFullActivity extends BaseWebviewActivity2 {
 
     @Override
     public void initView() {
+        screenOrientationState = true;
         mWebview = findViewById(R.id.wv_picwidthwebview);
         super.initView();
         String[] split = pic.split("\\|{3}");

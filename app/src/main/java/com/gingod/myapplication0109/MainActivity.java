@@ -144,7 +144,7 @@ public class MainActivity extends BaseSimpleActivity {
                         openActivity(SelectMultiFileActivity.class);
                         break;
                     case 6:
-                        openActivity(OpenFileActivity.class);
+                        openActivity(TestVideoFullActivity2.class);
                         break;
                 }
             }
