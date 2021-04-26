@@ -141,7 +141,10 @@ public class SelectMultiFileActivity extends BaseSimpleActivity {
                     protected void convert(@NotNull BaseViewHolder baseViewHolder, String dir) {
                         try {
                             baseViewHolder
-                                    .setText(R.id.tv_item_multi_select_file_directoryname, showStr(dir) + "/")
+                                    .setText(R.id.tv_item_multi_select_file_directoryname, showStr(dir))
+                                    .setTextColorRes(R.id.tv_item_multi_select_file_directoryname,
+                                            (baseViewHolder.getAdapterPosition() == dirList.size() - 1) ? R.color.wallet : R.color.light_gre)
+                                    .setGone(R.id.iv_item_multi_select_file, baseViewHolder.getAdapterPosition() == dirList.size() - 1)
                             ;
                         } catch (Exception e) {
                             e.printStackTrace();
@@ -191,9 +194,12 @@ public class SelectMultiFileActivity extends BaseSimpleActivity {
                         try {
                             baseViewHolder
                                     .setText(R.id.tv_item_select_file_name, showStr(fileInfo.getFileName()))
-                                    .setText(R.id.tv_item_select_file_size, DIRECTORY.equals(fileInfo.getSuffix()) ? (fileInfo.getFileSize() + "项") + " | " + fileInfo.getTime() : showStr(FileUtil.FormetFileSize(fileInfo.getFileSize())) + " | " + fileInfo.getTime())
-                                    .setImageResource(R.id.iv_item_select_file_cover, DIRECTORY.equals(fileInfo.getSuffix()) ? R.mipmap.file_folder : FileUtil.getFileTypeImageId2(mActivity, fileInfo.getFileName()))
-                                    .setGone(R.id.iv_item_select_file_check, DIRECTORY.equals(fileInfo.getSuffix()))
+                                    .setText(R.id.tv_item_select_file_size,
+                                            DIRECTORY.equals(fileInfo.getSuffix()) ? (fileInfo.getFileSize() + "项") + " | " + fileInfo.getTime() : showStr(FileUtil.FormetFileSize(fileInfo.getFileSize())) + " | " + fileInfo.getTime())
+                                    .setImageResource(R.id.iv_item_select_file_cover,
+                                            DIRECTORY.equals(fileInfo.getSuffix()) ? R.mipmap.file_folder_new : FileUtil.getFileTypeImageId2(mActivity, fileInfo.getFileName()))
+                                    .setGone(R.id.iv_item_select_file_check,
+                                            DIRECTORY.equals(fileInfo.getSuffix()))
                                     .setImageResource(R.id.iv_item_select_file_check, fileInfo.isChecked ? R.mipmap.member_selected : R.mipmap.member_normal)
                             ;
 

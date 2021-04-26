@@ -1,17 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="wrap_content"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="horizontal">
 
     <TextView
         android:id="@+id/tv_item_multi_select_file_directoryname"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:gravity="center"
-        android:paddingRight="10dp"
-        android:text="sdcard/"
-        android:textColor="@color/wallet"
+        android:paddingLeft="10dp"
+        android:text="sdcard"
         android:textSize="@dimen/size_15"
         android:visibility="visible" />
 
-</FrameLayout>
+    <ImageView
+        android:id="@+id/iv_item_multi_select_file"
+        android:layout_width="5dp"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="10dp"
+        android:scaleType="centerInside"
+        android:src="@mipmap/a_right" />
+
+</LinearLayout>
