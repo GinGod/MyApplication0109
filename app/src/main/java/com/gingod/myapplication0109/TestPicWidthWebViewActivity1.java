@@ -1,10 +1,11 @@
 package com.gingod.myapplication0109;
 
-import android.net.http.SslError;
 import android.os.Build;
-import android.webkit.SslErrorHandler;
-import android.webkit.WebView;
-import android.webkit.WebViewClient;
+
+import com.tencent.smtt.export.external.interfaces.SslError;
+import com.tencent.smtt.export.external.interfaces.SslErrorHandler;
+import com.tencent.smtt.sdk.WebView;
+import com.tencent.smtt.sdk.WebViewClient;
 
 import com.gingod.myapplication0109.base.BaseSimpleActivity;
 
@@ -72,11 +73,10 @@ public class TestPicWidthWebViewActivity1 extends BaseSimpleActivity {
         }
 
         @Override
-        public void onReceivedSslError(WebView view, SslErrorHandler handler, SslError error) {
-            super.onReceivedSslError(view, handler, error);
-            handler.proceed(); // 兼容https
+        public void onReceivedSslError(WebView webView, SslErrorHandler sslErrorHandler, SslError sslError) {
+            super.onReceivedSslError(webView, sslErrorHandler, sslError);
+            sslErrorHandler.proceed();
         }
-
     }
 
     /**

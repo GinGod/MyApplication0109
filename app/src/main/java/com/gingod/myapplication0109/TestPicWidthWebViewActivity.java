@@ -1,9 +1,5 @@
 package com.gingod.myapplication0109;
 
-import android.os.Build;
-import android.webkit.WebSettings;
-
-import com.gingod.myapplication0109.base.BaseWebviewActivity;
 import com.gingod.myapplication0109.base.BaseWebviewActivity2;
 
 public class TestPicWidthWebViewActivity extends BaseWebviewActivity2 {

@@ -16,12 +16,14 @@ import android.view.ViewGroup;
 import android.view.ViewParent;
 import android.view.WindowManager;
 import android.webkit.JavascriptInterface;
-import android.webkit.SslErrorHandler;
-import android.webkit.ValueCallback;
-import android.webkit.WebChromeClient;
-import android.webkit.WebSettings;
-import android.webkit.WebView;
-import android.webkit.WebViewClient;
+
+import com.tencent.smtt.export.external.interfaces.IX5WebChromeClient;
+import com.tencent.smtt.export.external.interfaces.SslErrorHandler;
+import com.tencent.smtt.sdk.ValueCallback;
+import com.tencent.smtt.sdk.WebChromeClient ;
+import com.tencent.smtt.sdk.WebSettings;
+import com.tencent.smtt.sdk.WebView;
+import com.tencent.smtt.sdk.WebViewClient;
 import android.widget.FrameLayout;
 import android.widget.ProgressBar;
 import android.widget.Toast;
@@ -65,7 +67,7 @@ public abstract class BaseWebviewActivity2 extends BaseSimpleActivity {
     public String evaluationId, recipientType, recipientId, index;
 
     public View mCustomView;
-    public WebChromeClient.CustomViewCallback mCustomViewCallback;
+    public IX5WebChromeClient.CustomViewCallback mCustomViewCallback;
 
     public boolean screenOrientationState = false;
 
@@ -100,7 +102,7 @@ public abstract class BaseWebviewActivity2 extends BaseSimpleActivity {
         webSettings.setBlockNetworkImage(false);
         //5.0及以上
         if (Build.VERSION.SDK_INT > Build.VERSION_CODES.LOLLIPOP) {
-            webSettings.setMixedContentMode(WebSettings.MIXED_CONTENT_ALWAYS_ALLOW);
+//            webSettings.setMixedContentMode(WebSettings.MIXED_CONTENT_ALWAYS_ALLOW);
         }
         webSettings.setDefaultTextEncodingName("UTF-8");
         // 是否可访问Content Provider的资源，默认值 true
@@ -176,7 +178,7 @@ public abstract class BaseWebviewActivity2 extends BaseSimpleActivity {
             // For Lollipop 5.0+ Devices
             @Override
             @TargetApi(Build.VERSION_CODES.LOLLIPOP)
-            public boolean onShowFileChooser(WebView mWebView, ValueCallback<Uri[]> filePathCallback, FileChooserParams fileChooserParams) {
+            public boolean onShowFileChooser(com.tencent.smtt.sdk.WebView mWebView, ValueCallback<Uri[]> filePathCallback, FileChooserParams fileChooserParams) {
                 if (uploadMessage != null) {
                     uploadMessage.onReceiveValue(null);
                     uploadMessage = null;
@@ -198,7 +200,8 @@ public abstract class BaseWebviewActivity2 extends BaseSimpleActivity {
             }
 
             //For Android 4.1 only
-            protected void openFileChooser(ValueCallback<Uri> uploadMsg, String acceptType, String capture) {
+            @Override
+            public void openFileChooser(ValueCallback<Uri> uploadMsg, String acceptType, String capture) {
                 mUploadMessage = uploadMsg;
                 Intent intent = new Intent(Intent.ACTION_GET_CONTENT);
                 intent.addCategory(Intent.CATEGORY_OPENABLE);
@@ -216,7 +219,7 @@ public abstract class BaseWebviewActivity2 extends BaseSimpleActivity {
 
             //获取网站标题
             @Override
-            public void onReceivedTitle(WebView view, String title) {
+            public void onReceivedTitle(com.tencent.smtt.sdk.WebView view, String title) {
 //                if (TextUtils.isEmpty(html_title)) {
 //                    if (tv_base_title != null) {
 //                        setTVText(title, tv_base_title);
@@ -226,7 +229,7 @@ public abstract class BaseWebviewActivity2 extends BaseSimpleActivity {
 
             //获取加载进度
             @Override
-            public void onProgressChanged(WebView view, int newProgress) {
+            public void onProgressChanged(com.tencent.smtt.sdk.WebView view, int newProgress) {
                 loge(newProgress + "");
                 if (progressBar != null) {
                     progressBar.setProgress(newProgress);
@@ -237,10 +240,21 @@ public abstract class BaseWebviewActivity2 extends BaseSimpleActivity {
             }
 
             @Override
-            public void onShowCustomView(View view, CustomViewCallback callback) {
-                showCustomView(view, callback);
-                super.onShowCustomView(view, callback);
+            public void onShowCustomView(View view, IX5WebChromeClient.CustomViewCallback customViewCallback) {
+                showCustomView(view, customViewCallback);
+                super.onShowCustomView(view, customViewCallback);
             }
+
+            @Override
+            public void onShowCustomView(View view, int i, IX5WebChromeClient.CustomViewCallback customViewCallback) {
+                super.onShowCustomView(view, i, customViewCallback);
+            }
+
+            //            @Override
+//            public void onShowCustomView(View view, CustomViewCallback callback) {
+//                showCustomView(view, callback);
+//                super.onShowCustomView(view, callback);
+//            }
 
             @Override
             public void onHideCustomView() {
@@ -260,8 +274,8 @@ public abstract class BaseWebviewActivity2 extends BaseSimpleActivity {
             }
 
             @Override
-            public void onReceivedSslError(WebView view, SslErrorHandler handler, SslError error) {
-                handler.proceed();
+            public void onReceivedSslError(WebView webView, SslErrorHandler sslErrorHandler, com.tencent.smtt.export.external.interfaces.SslError sslError) {
+                sslErrorHandler.proceed();
             }
 
             //设置加载前的函数
@@ -287,7 +301,7 @@ public abstract class BaseWebviewActivity2 extends BaseSimpleActivity {
      * @param view
      * @param callback
      */
-    private void showCustomView(View view, WebChromeClient.CustomViewCallback callback) {
+    private void showCustomView(View view, IX5WebChromeClient.CustomViewCallback callback) {
         try {
             loge("onShowCustomView");
             // if a view already exists then immediately terminate the new one

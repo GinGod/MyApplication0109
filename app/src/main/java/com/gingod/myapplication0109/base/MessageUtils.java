@@ -1,33 +1,16 @@
 package com.gingod.myapplication0109.base;
 
-import android.content.Context;
-import android.graphics.Bitmap;
-import android.graphics.Color;
-import android.os.Environment;
 import android.text.TextUtils;
-import android.webkit.DownloadListener;
 
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
-import com.gingod.myapplication0109.GlideWithCacheUtils;
-import com.gingod.myapplication0109.StringUtils;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
-import com.orhanobut.logger.Logger;
-import com.othershe.combinebitmap.CombineBitmap;
-import com.othershe.combinebitmap.layout.DingLayoutManager;
-import com.othershe.combinebitmap.listener.OnProgressListener;
 
 import java.math.BigDecimal;
 import java.math.BigInteger;
 import java.security.MessageDigest;
-import java.text.SimpleDateFormat;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Comparator;
-import java.util.Date;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;

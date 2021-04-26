@@ -3,7 +3,6 @@ package com.gingod.myapplication0109;
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.net.Uri;
-import android.net.http.SslError;
 import android.os.Build;
 import android.os.Bundle;
 import android.text.TextUtils;
@@ -12,12 +11,14 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.ViewParent;
 import android.webkit.JavascriptInterface;
-import android.webkit.SslErrorHandler;
-import android.webkit.ValueCallback;
-import android.webkit.WebChromeClient;
-import android.webkit.WebSettings;
-import android.webkit.WebView;
-import android.webkit.WebViewClient;
+
+import com.tencent.smtt.export.external.interfaces.SslError;
+import com.tencent.smtt.export.external.interfaces.SslErrorHandler;
+import com.tencent.smtt.sdk.ValueCallback;
+import com.tencent.smtt.sdk.WebChromeClient ;
+import com.tencent.smtt.sdk.WebSettings;
+import com.tencent.smtt.sdk.WebView;
+import com.tencent.smtt.sdk.WebViewClient;
 
 
 import com.gingod.myapplication0109.base.BaseSimpleActivity;
@@ -90,7 +91,7 @@ public class WebviewActivity extends BaseSimpleActivity {
         webSettings.setSavePassword(false);  // 不保存密码（弹窗）
         webSettings.setBlockNetworkImage(false); // 解决图片不显示
         if (Build.VERSION.SDK_INT > Build.VERSION_CODES.LOLLIPOP) { //5.0及以上
-            webSettings.setMixedContentMode(WebSettings.MIXED_CONTENT_ALWAYS_ALLOW);
+//            webSettings.setMixedContentMode(WebSettings.MIXED_CONTENT_ALWAYS_ALLOW);
         }
 
         mWebview.addJavascriptInterface(new JavascriptInterfaces(this), "hexue_jsinterface");
@@ -119,10 +120,11 @@ public class WebviewActivity extends BaseSimpleActivity {
                 takePhoto();//拍照
             }
 
-            //For Android 4.1
-            public void openFileChooser(ValueCallback<Uri> uploadMsg, String acceptType, String capture) {
-                mUploadMessage = uploadMsg;
-                takePhoto();//拍照
+            @Override
+            public void openFileChooser(ValueCallback<Uri> valueCallback, String s, String s1) {
+                super.openFileChooser(valueCallback, s, s1);
+                mUploadMessage = valueCallback;
+                takePhoto();
             }
 
             // For Android 5.0+
@@ -161,8 +163,9 @@ public class WebviewActivity extends BaseSimpleActivity {
             }
 
             @Override
-            public void onReceivedSslError(WebView view, SslErrorHandler handler, SslError error) {
-                handler.proceed();
+            public void onReceivedSslError(WebView webView, SslErrorHandler sslErrorHandler, SslError sslError) {
+                super.onReceivedSslError(webView, sslErrorHandler, sslError);
+                sslErrorHandler.proceed();
             }
 
             //设置加载前的函数
