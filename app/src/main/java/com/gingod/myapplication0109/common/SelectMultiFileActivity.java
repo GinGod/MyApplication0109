@@ -15,6 +15,7 @@ import com.bumptech.glide.Glide;
 import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.chad.library.adapter.base.listener.OnItemClickListener;
 import com.chad.library.adapter.base.viewholder.BaseViewHolder;
+import com.gingod.myapplication0109.BasisExecutors;
 import com.gingod.myapplication0109.R;
 import com.gingod.myapplication0109.base.BaseSimpleActivity;
 import com.gingod.myapplication0109.bean.FileInfo;
@@ -190,7 +191,7 @@ public class SelectMultiFileActivity extends BaseSimpleActivity {
                         try {
                             baseViewHolder
                                     .setText(R.id.tv_item_select_file_name, showStr(fileInfo.getFileName()))
-                                    .setText(R.id.tv_item_select_file_size, DIRECTORY.equals(fileInfo.getSuffix()) ? (fileInfo.getFileSize() + "项") : showStr(FileUtil.FormetFileSize(fileInfo.getFileSize())))
+                                    .setText(R.id.tv_item_select_file_size, DIRECTORY.equals(fileInfo.getSuffix()) ? (fileInfo.getFileSize() + "项") + " | " + fileInfo.getTime() : showStr(FileUtil.FormetFileSize(fileInfo.getFileSize())) + " | " + fileInfo.getTime())
                                     .setImageResource(R.id.iv_item_select_file_cover, DIRECTORY.equals(fileInfo.getSuffix()) ? R.mipmap.file_folder : FileUtil.getFileTypeImageId2(mActivity, fileInfo.getFileName()))
                                     .setGone(R.id.iv_item_select_file_check, DIRECTORY.equals(fileInfo.getSuffix()))
                                     .setImageResource(R.id.iv_item_select_file_check, fileInfo.isChecked ? R.mipmap.member_selected : R.mipmap.member_normal)
@@ -267,6 +268,23 @@ public class SelectMultiFileActivity extends BaseSimpleActivity {
                 tvUpload.setBackgroundResource(R.drawable.bg_tv_cicle_send_presss_yes);
                 setGone(slSelectFile);
             }
+            BasisExecutors.getInstance().diskIO().execute(new Runnable() {
+                @Override
+                public void run() {
+                    for (int i = 0; i < allData.size(); i++) {
+                        FileInfo fileInfo = allData.get(i);
+                        if (DIRECTORY.equals(fileInfo.getSuffix())) {
+                            fileInfo.setFileSize(new File(fileInfo.getFilePath()).listFiles().length);
+                        }
+                    }
+                    runOnUiThread(new Runnable() {
+                        @Override
+                        public void run() {
+                            initAdapter();
+                        }
+                    });
+                }
+            });
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -301,7 +319,9 @@ public class SelectMultiFileActivity extends BaseSimpleActivity {
                         document = new FileInfo();
                         document.setSuffix(DIRECTORY);
                         document.setFileName(file.getName());
-                        document.setFileSize(file.listFiles().length);
+                        document.setFilePath(file.getAbsolutePath());
+                        document.setTime(FileUtil.getFileLastModifiedTime(file));
+//                        document.setFileSize(file.listFiles().length);
                     }
                 } else {
                     document = FileUtil.getFileInfoFromFile(file);

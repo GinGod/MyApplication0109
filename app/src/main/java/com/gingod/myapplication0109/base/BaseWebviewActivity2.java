@@ -3,6 +3,7 @@ package com.gingod.myapplication0109.base;
 import android.annotation.TargetApi;
 import android.content.ActivityNotFoundException;
 import android.content.Intent;
+import android.content.pm.ActivityInfo;
 import android.graphics.Bitmap;
 import android.net.Uri;
 import android.net.http.SslError;
@@ -13,6 +14,7 @@ import android.view.KeyEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.ViewParent;
+import android.view.WindowManager;
 import android.webkit.JavascriptInterface;
 import android.webkit.SslErrorHandler;
 import android.webkit.ValueCallback;
@@ -20,6 +22,7 @@ import android.webkit.WebChromeClient;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
+import android.widget.FrameLayout;
 import android.widget.ProgressBar;
 import android.widget.Toast;
 
@@ -61,6 +64,9 @@ public abstract class BaseWebviewActivity2 extends BaseSimpleActivity {
     private final static int FILECHOOSER_RESULTCODE = 2;
     public String evaluationId, recipientType, recipientId, index;
 
+    public View mCustomView;
+    public WebChromeClient.CustomViewCallback mCustomViewCallback;
+
     @Override
     public void initData() {
         super.initData();
@@ -80,6 +86,7 @@ public abstract class BaseWebviewActivity2 extends BaseSimpleActivity {
         /**设置网页字体不跟随系统字体发生改变*/
         webSettings.setTextZoom(100);
         webSettings.setJavaScriptEnabled(true);
+        webSettings.setPluginState(WebSettings.PluginState.ON);
         webSettings.setDomStorageEnabled(true);
         //这里需要设置为true，才能让Webivew支持<meta>标签的viewport属性
         webSettings.setUseWideViewPort(true);
@@ -226,6 +233,24 @@ public abstract class BaseWebviewActivity2 extends BaseSimpleActivity {
                     }
                 }
             }
+
+            @Nullable
+            @Override
+            public View getVideoLoadingProgressView() {
+                return super.getVideoLoadingProgressView();
+            }
+
+            @Override
+            public void onShowCustomView(View view, CustomViewCallback callback) {
+                super.onShowCustomView(view, callback);
+                showCustomView(view, callback);
+            }
+
+            @Override
+            public void onHideCustomView() {
+                super.onHideCustomView();
+                hideCustomView();
+            }
         });
 
         //设置WebViewClient类
@@ -261,6 +286,112 @@ public abstract class BaseWebviewActivity2 extends BaseSimpleActivity {
     }
 
     /**
+     * 设置全屏播放
+     *
+     * @param view
+     * @param callback
+     */
+    private void showCustomView(View view, WebChromeClient.CustomViewCallback callback) {
+        try {
+            loge("onShowCustomView");
+            // if a view already exists then immediately terminate the new one
+            if (mCustomView != null && mCustomViewCallback != null) {
+                mCustomViewCallback.onCustomViewHidden();
+                return;
+            }
+            // 1. Stash the current state
+            mCustomView = view;
+            // 2. Stash the custom view callback
+            mCustomViewCallback = callback;
+            // 3. Add the custom view to the view hierarchy
+            FrameLayout decor = (FrameLayout) getWindow().getDecorView();
+            decor.addView(mCustomView, new FrameLayout.LayoutParams(
+                    ViewGroup.LayoutParams.MATCH_PARENT,
+                    ViewGroup.LayoutParams.MATCH_PARENT));
+            mWebview.setVisibility(View.GONE);
+//            setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
+            //全屏
+            getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
+                    WindowManager.LayoutParams.FLAG_FULLSCREEN);
+            //隐藏虚拟按键
+            View decorView = getWindow().getDecorView();
+            int uiOptions = View.SYSTEM_UI_FLAG_HIDE_NAVIGATION
+                    | View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY
+                    | View.SYSTEM_UI_FLAG_FULLSCREEN;
+            decorView.setSystemUiVisibility(uiOptions);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    /**
+     * 取消全屏播放
+     *
+     * @return
+     */
+    private void hideCustomView() {
+        try {
+            loge("onHideCustomView");
+            mWebview.setVisibility(View.VISIBLE);
+            if (mCustomView == null) {
+                return;
+            }
+            mCustomView.setVisibility(View.GONE);
+            // 1. Remove the custom view
+            FrameLayout decor = (FrameLayout) getWindow().getDecorView();
+            decor.removeView(mCustomView);
+            mCustomView = null;
+            // 2. Call the custom view callback
+            mCustomViewCallback.onCustomViewHidden();
+            mCustomViewCallback = null;
+            setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+            //显示虚拟按键
+            View decorView = getWindow().getDecorView();
+            int uiOptions = View.SYSTEM_UI_FLAG_FULLSCREEN
+                    | View.SYSTEM_UI_FLAG_LAYOUT_STABLE;
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+                uiOptions = View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN
+                        | View.SYSTEM_UI_FLAG_LAYOUT_STABLE
+                        | View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR;
+            }
+            decorView.setSystemUiVisibility(uiOptions);
+            // 取消全屏
+            final WindowManager.LayoutParams attrs = getWindow().getAttributes();
+            attrs.flags &= (~WindowManager.LayoutParams.FLAG_FULLSCREEN);
+            getWindow().setAttributes(attrs);
+            getWindow().clearFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    @Override
+    protected void onResume() {
+        try {
+            super.onResume();
+            if (mWebview != null) {
+                // 暂停网页中正在播放的视频
+                mWebview.onResume();
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    @Override
+    protected void onPause() {
+        try {
+            super.onPause();
+            if (mWebview != null) {
+                // 暂停网页中正在播放的视频
+                mWebview.onPause();
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    /**
      * 点击返回上一页面而不是退出浏览器
      *
      * @param keyCode
@@ -268,13 +399,24 @@ public abstract class BaseWebviewActivity2 extends BaseSimpleActivity {
      * @return
      */
     @Override
-    public boolean onKeyDown(int keyCode, KeyEvent event) {
-        if (keyCode == KeyEvent.KEYCODE_BACK && mWebview.canGoBack()) {
-            mWebview.goBack();
-            return true;
+    public boolean onKeyUp(int keyCode, KeyEvent event) {
+        try {
+            switch (keyCode) {
+                case KeyEvent.KEYCODE_BACK:
+                    /** 回退键 事件处理 优先级:视频播放全屏-网页回退-关闭页面 */
+                    if (mCustomView != null) {
+                        mCustomViewCallback.onCustomViewHidden();
+                    } else if (mWebview.canGoBack()) {
+                        mWebview.goBack();
+                    } else {
+                        finish();
+                    }
+                    return true;
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
         }
-
-        return super.onKeyDown(keyCode, event);
+        return super.onKeyUp(keyCode, event);
     }
 
     @Override

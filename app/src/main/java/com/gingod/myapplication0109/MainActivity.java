@@ -129,7 +129,7 @@ public class MainActivity extends BaseSimpleActivity {
                         openActivity(TestPicWidthWebViewActivity.class);
                         break;
                     case 1:
-                        openActivity(TestPicWidthWebViewActivity1.class);
+                        openActivity(TestVideoFullActivity.class);
                         break;
                     case 2:
                         openActivity(SignActivity.class);

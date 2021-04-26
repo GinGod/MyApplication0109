@@ -25,6 +25,7 @@
     <application
         android:name=".MyApplication"
         android:allowBackup="true"
+        android:hardwareAccelerated="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
@@ -55,6 +56,10 @@
         <activity android:name=".common.SelectFileActivity" />
         <activity android:name=".common.SelectMultiFileActivity" />
         <activity android:name=".SignActivity" />
+        <activity
+            android:name=".TestVideoFullActivity"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize"
+            android:hardwareAccelerated="true" />
     </application>
 
 </manifest>
